@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="logo"><img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></div>
+        <button class="btn-menu">Закрыть-Развернуть</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item--active"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="#">Фотографии</a></li>
+          <li class="main-nav__item"><a href="#">Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="intro intro--internal">
+        <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <p class="intro-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+      </div>
+
+      <form class="award" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="user-data">
+          <label for="surname">Фамилия:</label>
+          <input type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
+          <label for="your-name">Имя:</label>
+          <input type="text" id="your-name" name="your-name" placeholder="Введите ваше имя *" required>
+          <label for="patronic">Отчество:</label>
+          <input type="text" id="patronic" name="patronic" placeholder="Ну и отчество тоже">
+        </div>
+        <div class="advantages">
+          <label>Ваши безбашенные достижения в путешествии</label>
+          <input type="checkbox" id="selfi" name="travel" checked>
+          <label for="selfi" class="lbl-info">Сделал селфи с акулой</label>
+          <input type="checkbox" id="beach" name="travel" checked>
+          <label for="beach" class="lbl-info">Обгорел на пляже</label>
+          <input type="checkbox" id="norris" name="travel">
+          <label for="norris" class="lbl-info">Видел Чака Норриса</label>
+          <input type="checkbox" id="buy" name="travel">
+          <label for="buy" class="lbl-info">Накупил сувениров</label>
+          <input type="checkbox" id="tower" name="travel" checked>
+          <label for="tower" class="lbl-info">Удержал башню</label>
+          <input type="checkbox" id="hotel" name="travel">
+          <label for="hotel" class="lbl-info">Разгромил отель</label>
+        </div>
+        <div class="user-address">
+          <label for="phone">Номер телефона</label>
+          <input type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
+          <label for="your-email">адрес почты</label>
+          <input type="email" id="your-email" name="your-email" placeholder="Введите почту *" required>
+        </div>
+        <div class="application">
+          <label>С каким приложением путешествовали?</label>
+          <input type="radio" id="ios" name="program" checked>
+          <label for="ios" class="lbl-info">Pink для iOS</label>
+          <input type="radio" id="andro" name="program">
+          <label for="andro" class="lbl-info">Pink на Android</label>
+          <input type="radio" id="win" name="program">
+          <label for="win" class="lbl-info">Windows Phone</label>
+        </div>
+        <div class="emotion">
+          <label for="emotion-descr">Опишите свои эмоции</label>
+          <textarea name="emotion-descr" id="emotion-descr" cols="10" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </div>
+        <button class="send">Отправить форму</button>
+        <b>* — обязательные поля</b>
+      </form>
+    </main>
+
+    <footer class="main-footer">
+      <div class="logo logo--pic">
+        <a href="index.html"><img src="http://placehold.it/147x40" alt="Logo" width="147" height="40"></a>
+      </div>
+      <div class="social">
+        <a href="#" class="social-btn social-tw">Twitter</a>
+        <a href="#" class="social-btn social-fb">Facebook</a>
+        <a href="#" class="social-btn social-yt">Youtube</a>
+      </div>
+      <div class="copyright">
+        <b>Разработано</b>
+        <a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -7,7 +7,9 @@
   <body>
     <header class="main-header">
       <nav class="main-nav">
-        <a href="index.html" class="logo"><img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></a>
+        <div class="logo">
+          <a href="index.html"><img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></a>
+        </div>
         <button class="main-nav__btn-menu">Закрыть-Развернуть</button>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
@@ -25,7 +27,7 @@
       </div>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="form__user-data">
+        <fieldset class="form__user-data">
           <div class="form__field">
             <label for="surname">Фамилия:</label>
             <input type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
@@ -38,35 +40,35 @@
             <label for="patronic">Отчество:</label>
             <input type="text" id="patronic" name="patronic" placeholder="Ну и отчество тоже">
           </div>
-        </div>
-        <div class="form__advantages">
+        </fieldset>
+        <fieldset class="form__user-data--gray">
           <h2 class="form__title">Ваши безбашенные достижения в путешествии</h2>
-          <div class="form__check">
+          <div class="form__option">
             <input type="checkbox" id="selfi" name="travel" checked>
-            <label for="selfi" class="lbl-info">Сделал селфи с акулой</label>
+            <label for="selfi" class="form__label">Сделал селфи с акулой</label>
           </div>
-          <div class="form__check">
+          <div class="form__option">
             <input type="checkbox" id="beach" name="travel" checked>
-            <label for="beach" class="lbl-info">Обгорел на пляже</label>
+            <label for="beach" class="form__label">Обгорел на пляже</label>
           </div>
-          <div class="form__check">
+          <div class="form__option">
             <input type="checkbox" id="norris" name="travel">
-            <label for="norris" class="lbl-info">Видел Чака Норриса</label>
+            <label for="norris" class="form__label">Видел Чака Норриса</label>
           </div>
-          <div class="form__check">
+          <div class="form__option">
             <input type="checkbox" id="buy" name="travel">
-            <label for="buy" class="lbl-info">Накупил сувениров</label>
+            <label for="buy" class="form__label">Накупил сувениров</label>
           </div>
-          <div class="form__check">
+          <div class="form__option">
             <input type="checkbox" id="tower" name="travel" checked>
-            <label for="tower" class="lbl-info">Удержал башню</label>
+            <label for="tower" class="form__label">Удержал башню</label>
           </div>
-          <div class="form__check">
+          <div class="form__option">
             <input type="checkbox" id="hotel" name="travel">
-            <label for="hotel" class="lbl-info">Разгромил отель</label>
+            <label for="hotel" class="form__label">Разгромил отель</label>
           </div>
-        </div>
-        <div class="form__user-address">
+        </fieldset>
+        <fieldset class="form__user-data">
           <div class="form__field">
             <label for="phone">Номер телефона</label>
             <input type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
@@ -75,26 +77,26 @@
             <label for="your-email">адрес почты</label>
             <input type="email" id="your-email" name="your-email" placeholder="Введите почту *" required>
           </div>
-        </div>
-        <div class="form__application">
+        </fieldset>
+        <fieldset class="form__user-data--gray">
           <h2 class="form__title">С каким приложением путешествовали?</h2>
-          <div class="form__check">
+          <div class="form__option form__option--radio">
             <input type="radio" id="ios" name="program" checked>
-            <label for="ios" class="lbl-info">Pink для iOS</label>
+            <label for="ios" class="form__label">Pink для iOS</label>
           </div>
-          <div class="form__check">
+          <div class="form__option form__option--radio">
             <input type="radio" id="andro" name="program">
-            <label for="andro" class="lbl-info">Pink на Android</label>
+            <label for="andro" class="form__label">Pink на Android</label>
           </div>
-          <div class="form__check">
+          <div class="form__option form__option--radio">
             <input type="radio" id="win" name="program">
-            <label for="win" class="lbl-info">Windows Phone</label>
+            <label for="win" class="form__label">Windows Phone</label>
           </div>
-        </div>
-        <div class="form__emotion">
+        </fieldset>
+        <fieldset class="form__user-data">
           <h2 class="form__title">Опишите свои эмоции</h2>
           <textarea name="form__emotion-descr" id="emotion-descr" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-        </div>
+        </fieldset>
         <button class="form__send" type="submit">Отправить форму</button>
         <b>* — обязательные поля</b>
       </form>

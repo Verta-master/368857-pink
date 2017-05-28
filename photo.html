@@ -7,7 +7,9 @@
   <body>
     <header class="main-header">
       <nav class="main-nav">
-        <a href="index.html" class="logo"><img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></a>
+        <div class="logo">
+          <a href="index.html"><img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></a>
+        </div>
         <button class="main-nav__btn-menu">Закрыть-Развернуть</button>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
@@ -99,17 +101,17 @@
       <div class="upload">
         <p class="upload__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
         <img class="upload__img" src="http://placehold.it/280x374" alt="Uploaded image" width="280" height="374">
-        <form class="img-treat" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="modify-img" action="https://echo.htmlacademy.ru/" method="post">
           <div class="modify-buttons">
             <button class="modify-btn modify-btn--crop">Crop</button>
             <button class="modify-btn modify-btn--fill">Fill</button>
             <button class="modify-btn modify-btn--contrast">Contrast</button>
           </div>
-          <div class="slider">
+          <div class="modify-slider">
             <div class="slider__bar"></div>
             <div class="slider__pull"></div>
           </div>
-          <div class="post-buttons">
+          <div class="modify-buttons">
             <button type="submit" class="btn btn--post">Post</button>
             <button type="reset" class="btn btn--cancel btn--disabled">Cancel</button>
           </div>

@@ -8,12 +8,12 @@
     <header class="main-header">
       <nav class="main-nav">
         <div class="logo"><img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></div>
-        <button class="btn-menu">Закрыть-Развернуть</button>
+        <button class="main-nav__btn-menu">Закрыть-Развернуть</button>
         <ul class="main-nav__list">
-          <li class="main-nav__item--active"><a>Главная</a></li>
-          <li class="main-nav__item"><a href="#">Фотографии</a></li>
-          <li class="main-nav__item"><a href="#">Конкурс</a></li>
-          <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+          <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
@@ -21,29 +21,29 @@
     <main>
       <div class="intro">
         <img class="intro__img" src="http://placehold.it/320x462" alt="Pink intro" width="320" height="462">
-        <button class="btn btn--download">Скачать приложение</button>
+        <a href="https://www.apple.com/itunes/" class="btn btn--download">Скачать приложение</a>
         <div class="logo-download">
-          <a class="logo-apple" href="#"><img src="http://placehold.it/47x56" alt="Apple logo" width="47" height="56"></a>
-          <a class="logo-android" href="#"><img src="http://placehold.it/43x47" alt="Android logo" width="43" height="47"></a>
-          <a class="logo-microsoft" href="#"><img src="http://placehold.it/44x41" alt="Microsoft logo" width="44" height="41"></a>
+          <a class="logo-download__link logo-download__link--apple" href="https://www.apple.com/itunes/"><img src="http://placehold.it/47x56" alt="Apple logo" width="47" height="56"></a>
+          <a class="logo-download__link logo-download__link--android" href="https://play.google.com/"><img src="http://placehold.it/43x47" alt="Android logo" width="43" height="47"></a>
+          <a class="logo-download__link logo-download__link--microsoft" href="https://www.microsoft.com/store/apps/windows-phone"><img src="http://placehold.it/44x41" alt="Microsoft logo" width="44" height="41"></a>
           <p class="logo-download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </div>
 
       <div class="info">
-        <b class="info-question">Устали от серости мегаполиса?</b>
-        <b class="info-question">Нам есть, что вам предложить!</b>
+        <h2 class="info__question">Устали от серости мегаполиса?</h2>
+        <h2 class="info__question">Нам есть, что вам предложить!</h2>
         <div class="info-benefits">
           <div class="info-text">
-            <h2 class="info-text__title">Поднимает настроение</h2>
+            <h3 class="info-text__title">Поднимает настроение</h3>
             <p class="info-text__paragraph">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </div>
           <div class="info-text">
-            <h2 class="info-text__title">Меняет мир вокруг</h2>
+            <h3 class="info-text__title">Меняет мир вокруг</h3>
             <p class="info-text__paragraph">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </div>
           <div class="info-text">
-            <h2 class="info-text__title">Заводит новых друзей</h2>
+            <h3 class="info-text__title">Заводит новых друзей</h3>
             <p class="info-text__paragraph">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
           </div>
           <img src="http://placehold.it/157x320" alt="iPhone smile" width="157" height="320">
@@ -52,15 +52,15 @@
 
       <div class="review">
         <div class="info-text">
-          <h2 class="info-text__title">Николай Петров</h2>
+          <h3 class="info-text__title">Николай Петров</h3>
           <p class="info-text__paragraph">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </div>
         <div class="info-text">
-          <h2 class="info-text__title">Николай Петров</h2>
+          <h3 class="info-text__title">Николай Петров</h3>
           <p class="info-text__paragraph">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </div>
         <div class="info-text">
-          <h2 class="info-text__title">Николай Петров</h2>
+          <h3 class="info-text__title">Николай Петров</h3>
           <p class="info-text__paragraph">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </div>
         <div class="paginator">
@@ -72,19 +72,19 @@
 
       <div class="price">
         <div class="columns">
-          <div class="columns__col column1">
+          <div class="columns__col">
             <div class="columns__title">База<span class="columns__title--price">1,99 USD</span></div>
             <div class="columns__cell columns__cell--yes">Розовый фильтр</div>
             <div class="columns__cell columns__cell--no">Смайлики</div>
             <div class="columns__cell columns__cell--no">Комментарии</div>
           </div>
-          <div class="columns__col column2">
+          <div class="columns__col">
             <div class="columns__title columns__title--hit">Стандарт<span class="columns__title--price">3,99 USD</span></div>
             <div class="columns__cell columns__cell--yes">Розовый фильтр</div>
             <div class="columns__cell columns__cell--yes">Смайлики</div>
             <div class="columns__cell columns__cell--no">Комментарии</div>
           </div>
-          <div class="columns__col column3">
+          <div class="columns__col">
             <div class="columns__title">Анлим<span class="columns__title--price">9,99 USD</span></div>
             <div class="columns__cell columns__cell--yes">Розовый фильтр</div>
             <div class="columns__cell columns__cell--yes">Смайлики</div>
@@ -99,16 +99,29 @@
       </div>
 
       <div class="contacts">
-        <b class="info-question">Остались вопросы? Свяжитесь с нами!</b>
-        <p class="contacts__text">
-          Звоните:<br>
-          <span class="contacts__text contacts_text--red">+7 (812) 555-66-66</span>
-          Пишите:<br>
-          <span class="contacts__text contacts_text--red">mail@htmlacademy.ru</span>
-          Приезжайте в гости:<br>
-          <span class="contacts__text contacts_text--red">ул. Большая Конюшенная, 19/8</span>
-        </p>
+        <h2 class="contacts__question">Остались вопросы? Свяжитесь с нами!</h2>
+        <h3 class="info-text__title">Звоните:</h3>
+        <a href="tel:+78125556666" class="contacts__text contacts_text--red">+7 (812) 555-66-66</a>
+        <h3 class="info-text__title">Пишите:</h3>
+        <a href="mailto:mail@htmlacademy.ru" class="contacts__text contacts_text--red">mail@htmlacademy.ru</a>
+        <h3 class="info-text__title">Приезжайте в гости:</h3>
+        <p class="contacts__text contacts_text--red">ул. Большая Конюшенная, 19/8</p>
       </div>
     </main>
+
+    <footer class="main-footer">
+      <div class="logo logo--pic">
+        <a href="index.html"><img src="http://placehold.it/147x40" alt="Logo" width="147" height="40"></a>
+      </div>
+      <div class="social">
+        <a href="#" class="social-btn social-tw">Twitter</a>
+        <a href="#" class="social-btn social-fb">Facebook</a>
+        <a href="#" class="social-btn social-yt">Youtube</a>
+      </div>
+      <div class="copyright">
+        <b>Разработано</b>
+        <a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>
+      </div>
+    </footer>
   </body>
 </html>

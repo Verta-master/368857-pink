@@ -1,0 +1,156 @@
+.form {
+
+  &__user-data {
+    background-color: #fff;
+    border: none;
+    padding: 0 20px;
+    padding-top: 20px;
+
+    &--gray {
+      background-color: @bg-gray;
+    }
+
+    textarea {
+      margin-bottom: 45px;
+      padding: 20px;
+      width: 85%;
+      min-height: 100px;
+    }
+  }
+
+  &__field {
+
+    label {
+      display: block;
+      font-size: 14px;
+      line-height: 30px;
+      color: @red;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+      margin-left: 20px;
+    }
+
+    input {
+      font-size: 18px;
+      line-height: 30px;
+      color: @paleblue;
+      font-family: "Open Sans", "Arial", sans-serif;
+      padding: 14px 20px;
+      border: 2px solid #e5e5e5;
+      margin-bottom: 25px;
+      width: 85%;
+    }
+
+    input::-webkit-input-placeholder {
+      color: @paleblue;
+    }
+
+    input::-moz-placeholder {
+      color: @paleblue;
+    }
+
+    input[placeholder] {
+      color: @paleblue;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    color: @red;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 37px auto;
+    text-align: center;
+    padding: 0 25px;
+  }
+
+  &__send {
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2aab6d;
+    padding: 20px 44px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    color: #000;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    &--red {
+      color: @red;
+    }
+  }
+
+  &__option {
+    margin-bottom: 40px;
+
+    label {
+      padding-left: 70px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    label::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      border: 2px solid #e5e5e5;
+      background-color: #fff;
+    }
+
+    input[type="checkbox"]:checked + label::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 9px;
+      width: 20px;
+      height: 8px;
+      border-bottom: 2px solid @red;
+      border-left: 2px solid @red;
+      transform: rotate(-45deg);
+    }
+
+    &--radio {
+      label::before {
+        border-radius: 50%;
+      }
+
+      input[type="radio"]:checked + label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 12px;
+        width: 15px;
+        height: 15px;
+        background-color: @red;
+        border-radius: 50%;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+}

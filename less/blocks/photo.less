@@ -1,0 +1,59 @@
+.photo {
+  list-style-type: none;
+  padding: 0;
+
+  &__comment {
+    background-color: @bg-gray;
+    padding: 23px 15px;
+    margin: 0 20px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    margin: 0 20px;
+
+    &--panoramic {
+      margin: 0;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin: 0;
+    color: @paleblue;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+
+    span {
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin: 0;
+    color: @paleblue;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+
+  &__like {
+    display: block;
+    margin: 0;
+    margin-top: 20px;
+    color: @red;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding-left: 30px;
+    background: url(../../img/icon-heart.svg) no-repeat left;
+  }
+}

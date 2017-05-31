@@ -1,0 +1,62 @@
+.price {
+  background-color: @bg-gray;
+}
+
+.columns {
+  display: table;
+  width: 100%;
+  border: 2px solid #e5e5e5;
+  border-top: none;
+  border-collapse: collapse;
+
+  &__col {
+    display: table-cell;
+    width: 30%;
+    background-color: #fff;
+  }
+
+  &__title {
+    display: block;
+    background-color: @paleblue;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 20px;
+
+    &--hit {
+      background-image: url(../../img/bg-hit.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__price {
+    display: block;
+    background-color: @paleblue;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    padding-bottom: 20px;
+  }
+
+  &__cell {
+    font-size: 14px;
+    line-height: 30px;
+    color: @paleblue;
+    text-transform: uppercase;
+    font-size: normal;
+    padding: 22px;
+
+    &--yes {
+      background: url(../../img/icon-yes.svg) no-repeat right;
+    }
+
+    &--no {
+      background: url(../../img/icon-no.svg) no-repeat right;
+    }
+  }
+}

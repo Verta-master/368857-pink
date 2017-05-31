@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк - Конкурс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-nav">
-        <div class="logo">
-          <a href="index.html"><img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></a>
+        <div class="main-nav__top">
+          <div class="logo"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="23"></div>
+          <button class="main-nav__btn-menu">Закрыть-Развернуть</button>
         </div>
-        <button class="main-nav__btn-menu">Закрыть-Развернуть</button>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
           <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
@@ -21,9 +23,12 @@
     </header>
 
     <main>
-      <div class="intro intro--internal">
-        <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        <p class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+      <div class="intro">
+        <div class="intro__bg intro__bg--internal">
+          <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          <p class="intro__text intro__text--wide">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <p class="intro__text intro__text--hidden">Пожалуйста, заполните форму ниже:</p>
+        </div>
       </div>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
@@ -104,7 +109,7 @@
 
     <footer class="main-footer">
       <div class="logo logo--pic">
-        <a href="index.html"><img src="http://placehold.it/147x40" alt="Logo" width="147" height="40"></a>
+        <a href="index.html"><img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="147" height="41"></a>
       </div>
       <div class="social">
         <a href="#" class="social__btn social__btn--tw">Twitter</a>

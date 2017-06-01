@@ -5,65 +5,67 @@
   color: #283645;
   font-weight: normal;
   text-align: center;
+}
 
-  &__bg--main {
+.intro__bg {
+  &--main {
     min-height: 462px;
     background-color: @paleblue;
     background:
-      url(../../img/iphone-hand-mobile@1x.png) no-repeat bottom,
-      url(../../img/bg-back-mobile@1x.jpg) no-repeat bottom;
+      url(../img/iphone-hand-mobile@1x.png) no-repeat bottom,
+      url(../img/bg-back-mobile@1x.jpg) no-repeat bottom;
   }
 
-  &__bg--internal {
-    background: @paleblue url(../../img/bg-back-mobile@1x.jpg) no-repeat center;
+  &--internal {
+    background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat center;
+  }
+}
+
+.intro__title {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  padding-left: 35px;
+  padding-right: 38px;
+
+  &--main {
+    font-size: 0;
+  }
+}
+
+.intro__text {
+  display: block;
+  padding: 50px 35px;
+  margin: 0;
+  background-color: #fff;
+
+  &--wide {
+    padding: 50px 20px;
   }
 
-  &__title {
+  &--hidden {
+    display: none;
+  }
+}
+
+.intro__link {
+  background-color: @paleblue;
+  padding: 25px 20px;
+
+  a {
     display: block;
-    font-size: 24px;
-    font-weight: 300;
+    width: 100%;
     color: #fff;
-    margin: 0;
-    padding-top: 30px;
-    padding-bottom: 80px;
-    padding-left: 35px;
-    padding-right: 38px;
-
-    &--main {
-      font-size: 0;
-    }
-  }
-
-  &__text {
-    display: block;
-    padding: 50px 35px;
-    margin: 0;
-    background-color: #fff;
-
-    &--wide {
-      padding: 50px 20px;
-    }
-
-    &--hidden {
-      display: none;
-    }
-  }
-
-  &__link {
-    background-color: @paleblue;
-    padding: 25px 20px;
-
-    a {
-      display: block;
-      width: 100%;
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      line-height: 18px;
-      border: 3px solid #fff;
-      padding: 15px 0;
-      border-radius: 50px;
-    }
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    border: 3px solid #fff;
+    padding: 15px 0;
+    border-radius: 50px;
   }
 }

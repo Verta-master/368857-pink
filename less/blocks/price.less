@@ -1,62 +1,69 @@
 .price {
   background-color: @bg-gray;
+  overflow-x: auto;
 }
 
 .columns {
   display: table;
   width: 100%;
+  border-collapse: collapse;
+}
+
+.columns__col {
+  display: table-cell;
+  width: 30%;
+  background-color: #fff;
   border: 2px solid #e5e5e5;
   border-top: none;
-  border-collapse: collapse;
+  border-bottom: none;
+}
 
-  &__col {
-    display: table-cell;
-    width: 30%;
-    background-color: #fff;
+.columns__title {
+  display: block;
+  background-color: @paleblue;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 20px;
+
+  &--hit {
+    background-image: url(../img/bg-hit.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+.columns__price {
+  display: block;
+  background-color: @paleblue;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.columns__cell {
+  font-size: 14px;
+  line-height: 30px;
+  color: @paleblue;
+  text-transform: uppercase;
+  font-size: normal;
+  padding: 22px;
+  padding-right: 80px;
+  white-space: nowrap;
+  border-bottom: 2px solid #e5e5e5;
+
+  &--yes {
+    background: url(../img/icon-yes.svg) no-repeat;
+    background-position: 90%;
   }
 
-  &__title {
-    display: block;
-    background-color: @paleblue;
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding-top: 20px;
-
-    &--hit {
-      background-image: url(../../img/bg-hit.svg);
-      background-repeat: no-repeat;
-    }
-  }
-
-  &__price {
-    display: block;
-    background-color: @paleblue;
-    color: #fff;
-    text-align: center;
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 300;
-    padding-bottom: 20px;
-  }
-
-  &__cell {
-    font-size: 14px;
-    line-height: 30px;
-    color: @paleblue;
-    text-transform: uppercase;
-    font-size: normal;
-    padding: 22px;
-
-    &--yes {
-      background: url(../../img/icon-yes.svg) no-repeat right;
-    }
-
-    &--no {
-      background: url(../../img/icon-no.svg) no-repeat right;
-    }
+  &--no {
+    background: url(../img/icon-no.svg) no-repeat;
+    background-position: 90%;
   }
 }

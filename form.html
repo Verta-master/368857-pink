@@ -10,7 +10,7 @@
     <header class="main-header">
       <nav class="main-nav">
         <div class="main-nav__top">
-          <div class="logo"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="23"></div>
+          <a href="index.html" class="logo"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="23"></a>
           <button class="main-nav__btn-menu">Закрыть-Развернуть</button>
         </div>
         <ul class="main-nav__list">
@@ -34,16 +34,16 @@
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form__user-data">
           <div class="form__field">
-            <label for="surname">Фамилия:</label>
-            <input type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
+            <label for="surname" class="form__name">Фамилия:</label>
+            <input type="text" class="form__input" id="surname" name="surname" placeholder="Укажите фамилию *" required>
           </div>
           <div class="form__field">
-            <label for="your-name">Имя:</label>
-            <input type="text" id="your-name" name="your-name" placeholder="Введите ваше имя *" required>
+            <label for="your-name" class="form__name">Имя:</label>
+            <input type="text" class="form__input" id="your-name" name="your-name" placeholder="Введите ваше имя *" required>
           </div>
           <div class="form__field">
-            <label for="patronic">Отчество:</label>
-            <input type="text" id="patronic" name="patronic" placeholder="Ну и отчество тоже">
+            <label for="patronic" class="form__name">Отчество:</label>
+            <input type="text" class="form__input" id="patronic" name="patronic" placeholder="Ну и отчество тоже">
           </div>
         </fieldset>
         <fieldset class="form__user-data form__user-data--gray">
@@ -75,25 +75,25 @@
         </fieldset>
         <fieldset class="form__user-data">
           <div class="form__field">
-            <label for="phone">Номер телефона</label>
-            <input type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
+            <label for="phone" class="form__name">Номер телефона</label>
+            <input type="tel" class="form__input" id="phone" name="phone" placeholder="Номер, пожалуйста">
           </div>
           <div class="form__field">
-            <label for="your-email">адрес почты</label>
-            <input type="email" id="your-email" name="your-email" placeholder="Введите почту *" required>
+            <label for="your-email" class="form__name">адрес почты</label>
+            <input type="email" class="form__input" id="your-email" name="your-email" placeholder="Введите почту *" required>
           </div>
         </fieldset>
         <fieldset class="form__user-data form__user-data--gray">
           <h2 class="form__title">С каким приложением путешествовали?</h2>
-          <div class="form__option form__option--radio">
+          <div class="form__radio">
             <input type="radio" id="ios" name="program" checked>
             <label for="ios" class="form__label">Pink для iOS</label>
           </div>
-          <div class="form__option form__option--radio">
+          <div class="form__radio">
             <input type="radio" id="andro" name="program">
             <label for="andro" class="form__label">Pink на Android</label>
           </div>
-          <div class="form__option form__option--radio">
+          <div class="form__radio">
             <input type="radio" id="win" name="program">
             <label for="win" class="form__label">Windows Phone</label>
           </div>

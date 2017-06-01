@@ -1,5 +1,5 @@
 .contacts {
-  background: url(../../img/bg-map-mobile@1x.png) no-repeat center;
+  background: url(../img/bg-map-mobile@1x.png) no-repeat center;
   min-height: 613px;
 
   a {
@@ -7,8 +7,10 @@
     display: block;
     margin: 0 auto;
   }
+}
 
-  &__text--red {
+.contacts__text {
+  &--red {
     font-size: 24px;
     color: @red;
     font-weight: 300;
@@ -16,16 +18,12 @@
     margin: 0;
     margin-bottom: 10px;
   }
-
-  &__bg {
-    background-color: #fff;
-    padding-top: 45px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-  }
 }
 
-.main-footer--index {
-  display: none;
+.contacts__bg {
+  background-color: #fff;
+  padding-top: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
 }

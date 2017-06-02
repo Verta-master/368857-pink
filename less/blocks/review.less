@@ -1,0 +1,58 @@
+.review {
+  padding: 20px;
+}
+
+.review-text:nth-child(n+2) {
+  display: none;
+}
+
+.review-text__title {
+  display: block;
+  color: #000;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.review-text__paragraph {
+  color: @paleblue;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.review-text__person {
+  display: none;
+}
+
+@media @tablet {
+  .review-text__person {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+    color: @paleblue;
+    margin-bottom: 0;
+  }
+
+  .review-text__paragraph {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .review-text {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .review-text__title {
+    margin-bottom: 0;
+  }
+
+  .review {
+    padding-bottom: 0;
+  }
+}

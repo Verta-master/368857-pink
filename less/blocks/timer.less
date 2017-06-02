@@ -1,0 +1,40 @@
+.timer {
+  display: none;
+}
+
+@media @tablet {
+  .timer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .timer__title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+  }
+
+  .timer__info,
+  .timer__link {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+
+  .timer__info {
+    padding-right: 20px;
+  }
+
+  .timer__link {
+    color: @red;
+  }
+
+  .timer__text {
+    width: 300px;
+    padding: 10px;
+  }
+}

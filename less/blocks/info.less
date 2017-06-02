@@ -36,6 +36,47 @@
   text-align: center;
 }
 
-.review {
-  padding: 20px;
+@media @tablet {
+  .info__question {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 0;
+
+    &:nth-child(n+2) {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    &--contacts {
+      padding-right: 100px;
+      padding-left: 100px;
+      background-color: #fff;
+    }
+  }
+
+  .info-benefits {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0;
+  }
+
+  .info-wrap {
+    width: 300px;
+    padding-right: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+
+  .info-text__title,
+  .info-text__paragraph {
+    text-align: left;
+  }
+
+  .info-text__title {
+    &--contacts {
+      text-align: center;
+    }
+  }
 }

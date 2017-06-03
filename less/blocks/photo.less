@@ -71,6 +71,8 @@
   background: url(../img/icon-heart.svg) no-repeat left;
 }
 
+//----------------TABLET-----------------------
+
 @media @tablet {
   .photo {
     flex-direction: row;
@@ -128,5 +130,41 @@
   .photo__like {
     padding-left: 0;
     background-position: right 20%;
+  }
+}
+
+//---------------------------DESKTOP-----------------
+@media @desktop {
+  .photo {
+    max-width: 960px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .photo__item {
+    width: 320px;
+  }
+
+  .photo__item:first-child {
+    width: 100%;
+
+    .photo__comment {
+      margin: 0 10px;
+    }
+
+    .photo__like {
+      width: 135px;
+      background-position: right 10%;
+    }
+  }
+
+  .photo__img {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .photo__comment {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

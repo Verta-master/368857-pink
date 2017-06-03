@@ -27,6 +27,8 @@
   display: none;
 }
 
+//------------------TABLET----------------
+
 @media @tablet {
   .review-text__person {
     display: block;
@@ -54,5 +56,29 @@
 
   .review {
     padding-bottom: 0;
+  }
+}
+
+//---------------------DESKTOP-------------
+
+@media @desktop {
+  .review {
+    max-width: 940px;
+    margin: auto;
+  }
+
+  .review-text__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .review-text__person {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  .review-text {
+    padding-bottom: 40px;
   }
 }

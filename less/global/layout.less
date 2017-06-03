@@ -1,7 +1,6 @@
 .main-header,
 main,
 .main-footer {
-//  width: 320px;
   width: auto;
   margin: 0 auto;
 }
@@ -18,13 +17,7 @@ main,
   }
 }
 
-@media (min-width: 660px) and (max-width: 959px) {
-  .main-header,
-  main,
-  .main-footer {
-//    width: 660px;
-    margin: 0 auto;
-  }
+@media @tablet {
 
   .main-footer {
     flex-direction: row;
@@ -37,11 +30,9 @@ main,
   }
 }
 
-@media (min-width: 960px) {
-  .main-header,
-  main,
+@media @desktop {
   .main-footer {
-    width: 960px;
-    margin: 0 auto;
+    width: 940px;
+    padding: 0 10px;
   }
 }

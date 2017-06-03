@@ -69,6 +69,8 @@
   padding-right: 20px;
 }
 
+//-----------------TABLET-----------------------
+
 @media @tablet {
   .modify {
     margin-right: 20px;
@@ -133,5 +135,39 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+}
+
+//---------------------DESKTOP----------------
+
+@media @desktop {
+  .modify {
+    width: 410px;
+    margin-right: 0;
+  }
+
+  .modify__buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .modify__wrap {
+    width: 410px;
+    justify-content: space-around;
+  }
+
+  .modify__btn {
+    transform: scale(1);
+  }
+
+  .modify__group {
+    width: 285px;
+  }
+
+  .modify__slider::after {
+    width: 410px;
+    left: -120px;
   }
 }

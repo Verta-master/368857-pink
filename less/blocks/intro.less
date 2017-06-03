@@ -71,6 +71,8 @@
   }
 }
 
+//------------------TABLET---------------------
+
 @media @tablet {
   .intro {
     &--main {
@@ -123,5 +125,25 @@
       display: block;
       padding-top: 0;
     }
+  }
+}
+
+//-----------------DESKTOP---------------------
+
+@media @desktop {
+  .intro__title {
+    &--main {
+      font-size: 50px;
+      padding: 0 20px;
+    }
+  }
+
+  .intro__link a {
+    font-size: 21px;
+  }
+
+  .intro__text {
+    max-width: 790px;
+    margin: auto;
   }
 }

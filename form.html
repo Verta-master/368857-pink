@@ -46,7 +46,7 @@
           </div>
         </fieldset>
         <fieldset class="form__user-data form__user-data--gray">
-          <h2 class="form__title">Ваши безбашенные достижения в путешествии</h2>
+          <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
           <div class="form__option">
             <input type="checkbox" id="selfi" name="travel" checked>
             <label for="selfi" class="form__label">Сделал селфи с акулой</label>
@@ -73,17 +73,18 @@
           </div>
         </fieldset>
         <fieldset class="form__user-data">
-          <div class="form__field">
+          <legend class="form__title form__title--hidden">Контактная информация</legend>
+          <div class="form__field form__field--contact">
             <label for="phone" class="form__name">Номер телефона</label>
             <input type="tel" class="form__input" id="phone" name="phone" placeholder="Номер, пожалуйста">
           </div>
-          <div class="form__field">
+          <div class="form__field form__field--contact">
             <label for="your-email" class="form__name">адрес почты</label>
             <input type="email" class="form__input" id="your-email" name="your-email" placeholder="Введите почту *" required>
           </div>
         </fieldset>
         <fieldset class="form__user-data form__user-data--gray">
-          <h2 class="form__title">С каким приложением путешествовали?</h2>
+          <legend class="form__title">С каким приложением путешествовали?</legend>
           <div class="form__radio">
             <input type="radio" id="ios" name="program" checked>
             <label for="ios" class="form__label">Pink для iOS</label>
@@ -98,11 +99,13 @@
           </div>
         </fieldset>
         <fieldset class="form__user-data">
-          <h2 class="form__title">Опишите свои эмоции</h2>
+          <legend class="form__title">Опишите свои эмоции</legend>
           <textarea name="form__emotion-descr" id="emotion-descr" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
-        <button class="form__send" type="submit">Отправить форму</button>
-        <p class="form__text"><span class="form__text--red">*</span>— обязательные поля</p>
+        <div class="form__end">
+          <button class="form__send" type="submit">Отправить форму</button>
+          <p class="form__text"><span class="form__text--red">*</span>— обязательные поля</p>
+        </div>
       </form>
     </main>
 

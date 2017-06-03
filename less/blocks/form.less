@@ -1,21 +1,30 @@
 .form {
+  display: flex;
+  flex-direction: column;
+
   textarea {
     margin-bottom: 45px;
     padding: 20px;
-    width: 85%;
     min-height: 100px;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
 .form__user-data {
   background-color: #fff;
   border: none;
+  outline: none;
   padding: 0 20px;
-  padding-top: 20px;
 
   &--gray {
     background-color: @bg-gray;
   }
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__name {
@@ -34,9 +43,10 @@
   color: @paleblue;
   font-family: "Open Sans", "Arial", sans-serif;
   padding: 14px 20px;
+  padding-right: 0;
   border: 2px solid #e5e5e5;
   margin-bottom: 25px;
-  width: 85%;
+  width: auto;
 }
 
 .form__input::placeholder {
@@ -53,6 +63,10 @@
   margin: 37px auto;
   text-align: center;
   padding: 0 25px;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .form__send {
@@ -141,4 +155,95 @@ input[type="radio"]:checked + label::after {
 input[type="checkbox"],
 input[type="radio"] {
   display: none;
+}
+
+@media @tablet {
+  .form {
+    textarea {
+      min-height: 185px;
+    }
+  }
+
+  .form__field {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    input {
+      flex-grow: 1;
+      margin-bottom: 0;
+    }
+
+    label {
+      margin: 0;
+      margin-right: 15px;
+    }
+
+    &--contact {
+      flex-direction: column-reverse;
+      align-items: stretch;
+    }
+
+    &--contact label {
+      padding-left: 20px;
+    }
+  }
+
+  .form__user-data {
+    padding-top: 40px;
+    border: 2px solid #e5e5e5;
+    margin: 20px;
+
+    &--gray {
+      background-color: #fff;
+    }
+
+    &:first-child {
+      border: none;
+      margin: 0;
+      order: 1;
+    }
+
+    &:nth-child(4) {
+      order: 2;
+      padding-left: 60px;
+      padding-top: 0;
+    }
+
+    &:nth-child(3) {
+      order: 3;
+      padding: 0 60px;
+    }
+
+    &:nth-child(2) {
+      order: 4;
+      padding-left: 60px;
+      padding-top: 0;
+    }
+
+    &:nth-child(5) {
+      order: 5;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 20px;
+    }
+  }
+
+  .form__end {
+    order: 6;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .form__send {
+    margin: 0;
+  }
+
+  .form__title {
+    &--hidden {
+      display: block;
+    }
+  }
 }

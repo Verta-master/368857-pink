@@ -1,11 +1,18 @@
 .main-header,
 main,
 .main-footer {
-  width: 320px;
+//  width: 320px;
+  width: auto;
   margin: 0 auto;
 }
 
 .main-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
   &--index {
     display: none;
   }
@@ -15,13 +22,17 @@ main,
   .main-header,
   main,
   .main-footer {
-    width: 660px;
+//    width: 660px;
     margin: 0 auto;
   }
 
   .main-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
     &--index {
-      display: block;
+      display: flex;
     }
   }
 }

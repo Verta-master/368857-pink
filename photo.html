@@ -103,30 +103,44 @@
       </ul>
       <section class="upload">
         <p class="upload__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
-        <div class="upload__img">
-          <img src="img/photo-7-mobile@1x.jpg" alt="Uploaded image" width="280" height="374">
+        <div class="upload__wrap">
+          <div class="upload__img">
+            <img src="img/photo-7-mobile@1x.jpg" alt="Uploaded image" width="280" height="374">
+          </div>
+          <form class="modify" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="modify__wrap">
+              <div class="modify__tools">
+                <button class="modify__btn modify__btn--crop">Crop</button>
+                <button class="modify__btn modify__btn--fill">Fill</button>
+                <button class="modify__btn modify__btn--contrast">Contrast</button>
+              </div>
+              <div class="modify__group">
+                <div class="slider modify__slider">
+                  <div class="slider__bar modify__bar"></div>
+                  <div class="slider__pull modify__pull"></div>
+                </div>
+                <div class="slider modify__slider">
+                  <div class="slider__bar modify__bar"></div>
+                  <div class="slider__pull modify__pull"></div>
+                </div>
+                <div class="slider modify__slider">
+                  <div class="slider__bar modify__bar"></div>
+                  <div class="slider__pull modify__pull"></div>
+                </div>
+              </div>
+            </div>
+            <div class="modify__buttons">
+              <button type="submit" class="modify__post btn btn--post">Запостить</button>
+              <button type="reset" class="modify__cancel btn btn--cancel btn--disabled">Отмена</button>
+            </div>
+          </form>
         </div>
-        <form class="modify" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="modify__tools">
-            <button class="modify__btn modify__btn--crop">Crop</button>
-            <button class="modify__btn modify__btn--fill">Fill</button>
-            <button class="modify__btn modify__btn--contrast">Contrast</button>
-          </div>
-          <div class="slider modify__slider">
-            <div class="slider__bar modify__bar"></div>
-            <div class="slider__pull modify__pull"></div>
-          </div>
-          <div class="modify__buttons">
-            <button type="submit" class="modify__post btn btn--post">Запостить</button>
-            <button type="reset" class="modify__cancel btn btn--cancel btn--disabled">Отмена</button>
-          </div>
-        </form>
       </section>
     </main>
 
     <footer class="main-footer">
       <div class="logo logo--pic">
-        <a href="index.html"><img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="147" height="40"></a>
+        <a href="index.html"><img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="147" height="41"></a>
       </div>
       <div class="social">
         <a href="#" class="social__btn social__btn--tw">Twitter</a>

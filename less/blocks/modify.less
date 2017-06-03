@@ -1,6 +1,5 @@
 .modify {
   background-color: @bg-gray;
-  padding: 20px;
   padding-bottom: 40px;
 }
 
@@ -31,14 +30,23 @@
   }
 }
 
-.modify__slider {
-  position: relative;
+.modify__group {
+  padding: 0 40px;
+  width: auto;
   border-bottom: 1px solid #dddfe0;
   margin-bottom: 35px;
 }
 
+.modify__slider {
+  position: relative;
+
+  &:nth-child(n+2) {
+    display: none;
+  }
+}
+
 .modify__bar {
-  width: 240px;
+  width: auto;
   height: 2px;
   background-color: #000;
   margin: 33px auto;
@@ -54,4 +62,40 @@
   left: 200px;
   top: -5px;
   cursor: pointer;
+}
+
+.modify__buttons {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media @tablet {
+  .modify__btn {
+    transform: scale(0.5);
+  }
+
+  .modify__slider {
+
+    &:nth-child(n+2) {
+      display: block;
+    }
+  }
+
+  .modify__wrap {
+    display: flex;
+    align-items: stretch;
+    width: 300px;
+  }
+
+  .modify__group {
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  .modify__tools {
+    display: flex;
+    flex-direction: column;
+  }
 }

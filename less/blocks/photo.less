@@ -15,8 +15,10 @@
 
 .photo__img {
   margin: 0 20px;
+  padding: 0;
   display: block;
   font-size: 0;
+  text-align: center;
 
   &--panoramic {
     margin: 0;
@@ -58,4 +60,21 @@
   text-transform: uppercase;
   padding-left: 30px;
   background: url(../img/icon-heart.svg) no-repeat left;
+}
+
+@media @tablet {
+  .photo__item:nth-child(n+2) {
+    width: 300px;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .photo__comment,
+  .photo__img {
+    margin-right: 0;
+  }
+
+  .photo__comment {
+    min-height: 115px;
+  }
 }

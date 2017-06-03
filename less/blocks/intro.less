@@ -75,7 +75,7 @@
   .intro {
     &--main {
       min-height: 462px;
-      background: url(../img/bg-back-mobile@1x.jpg) no-repeat top;
+      background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
       position: relative;
     }
 
@@ -110,5 +110,18 @@
 
   .intro__link {
     background-color: transparent;
+  }
+
+  .intro__text {
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-bottom: 0;
+    font-size: 18px;
+    line-height: 30px;
+
+    &--hidden {
+      display: block;
+      padding-top: 0;
+    }
   }
 }

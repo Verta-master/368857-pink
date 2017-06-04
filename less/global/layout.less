@@ -17,6 +17,12 @@ main,
   }
 }
 
+.main-header {
+  background-color: @paleblue;
+}
+
+//---------------------TABLET-------------------------
+
 @media @tablet {
 
   .main-footer {
@@ -30,9 +36,22 @@ main,
   }
 }
 
+//---------------------DESKTOP-------------------------
+
 @media @desktop {
   .main-footer {
     width: 940px;
     padding: 0 10px;
+  }
+
+  .main-header {
+    background-color: #000;
+    opacity: 0.3;
+  }
+
+  body {
+    background: #fff url(../img/bg-back-mobile@1x.jpg) no-repeat top;
+    background-size: 100%;
+    background-position: center -90px;
   }
 }

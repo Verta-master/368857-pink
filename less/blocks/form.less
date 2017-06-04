@@ -84,6 +84,10 @@
   cursor: pointer;
   margin: auto;
   margin-bottom: 30px;
+
+  &--modal {
+    width: 100%;
+  }
 }
 
 .form__text {
@@ -266,6 +270,7 @@ input[type="radio"] {
     padding-right: 10px;
     width: 940px;
     margin: 0 auto;
+    background-color: #fff;
   }
 
   .form__user-data {
@@ -284,9 +289,6 @@ input[type="radio"] {
       width: 100%;
       margin-left: 0;
       margin-right: 0;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
 
       .form__option {
         width: 260px;
@@ -298,14 +300,9 @@ input[type="radio"] {
       margin-left: 0;
       margin-right: 0;
       margin-top: 50px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      align-items: center;
 
       .form__field {
-        width: 30%;
+        width: 375px;
       }
     }
 
@@ -347,5 +344,11 @@ input[type="radio"] {
 
   .form__label {
     font-size: 18px;
+  }
+
+  .form__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }

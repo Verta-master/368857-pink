@@ -75,10 +75,13 @@
 
 @media @tablet {
   .intro {
+    background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
+
     &--main {
       min-height: 462px;
-      background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
+    //  background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
       position: relative;
+      margin-bottom: 50px;
     }
 
     &--main::after {
@@ -131,6 +134,22 @@
 //-----------------DESKTOP---------------------
 
 @media @desktop {
+  .intro {
+
+    &--internal,
+    &--main {
+      max-width: 940px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: auto;
+      background: none;
+    }
+
+    &--main {
+      margin-bottom: 80px;
+    }
+  }
+
   .intro__title {
     &--main {
       font-size: 50px;

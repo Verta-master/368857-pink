@@ -47,40 +47,50 @@
         </fieldset>
         <fieldset class="form__user-data form__user-data--gray">
           <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
-          <div class="form__option">
-            <input type="checkbox" id="selfi" name="travel" checked>
-            <label for="selfi" class="form__label">Сделал селфи с акулой</label>
-          </div>
-          <div class="form__option">
-            <input type="checkbox" id="beach" name="travel" checked>
-            <label for="beach" class="form__label">Обгорел на пляже</label>
-          </div>
-          <div class="form__option">
-            <input type="checkbox" id="norris" name="travel">
-            <label for="norris" class="form__label">Видел Чака Норриса</label>
-          </div>
-          <div class="form__option">
-            <input type="checkbox" id="buy" name="travel">
-            <label for="buy" class="form__label">Накупил сувениров</label>
-          </div>
-          <div class="form__option">
-            <input type="checkbox" id="tower" name="travel" checked>
-            <label for="tower" class="form__label">Удержал башню</label>
-          </div>
-          <div class="form__option">
-            <input type="checkbox" id="hotel" name="travel">
-            <label for="hotel" class="form__label">Разгромил отель</label>
+          <div class="form__wrap">
+            <div class="form__wrap-check">
+              <div class="form__option">
+                <input type="checkbox" id="selfi" name="travel" checked>
+                <label for="selfi" class="form__label">Сделал селфи с акулой</label>
+              </div>
+              <div class="form__option">
+                <input type="checkbox" id="beach" name="travel" checked>
+                <label for="beach" class="form__label">Обгорел на пляже</label>
+              </div>
+            </div>
+            <div class="form__wrap-check">
+              <div class="form__option">
+                <input type="checkbox" id="norris" name="travel">
+                <label for="norris" class="form__label">Видел Чака Норриса</label>
+              </div>
+              <div class="form__option">
+                <input type="checkbox" id="buy" name="travel">
+                <label for="buy" class="form__label">Накупил сувениров</label>
+              </div>
+            </div>
+            <div class="form__wrap-check">
+              <div class="form__option">
+                <input type="checkbox" id="tower" name="travel" checked>
+                <label for="tower" class="form__label">Удержал башню</label>
+              </div>
+              <div class="form__option">
+                <input type="checkbox" id="hotel" name="travel">
+                <label for="hotel" class="form__label">Разгромил отель</label>
+              </div>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__user-data">
           <legend class="form__title form__title--hidden">Контактная информация</legend>
-          <div class="form__field form__field--contact">
-            <label for="phone" class="form__name">Номер телефона</label>
-            <input type="tel" class="form__input" id="phone" name="phone" placeholder="Номер, пожалуйста">
-          </div>
-          <div class="form__field form__field--contact">
-            <label for="your-email" class="form__name">адрес почты</label>
-            <input type="email" class="form__input" id="your-email" name="your-email" placeholder="Введите почту *" required>
+          <div class="form__wrap">
+            <div class="form__field form__field--contact">
+              <label for="phone" class="form__name">Номер телефона</label>
+              <input type="tel" class="form__input" id="phone" name="phone" placeholder="Номер, пожалуйста">
+            </div>
+            <div class="form__field form__field--contact">
+              <label for="your-email" class="form__name">адрес почты</label>
+              <input type="email" class="form__input" id="your-email" name="your-email" placeholder="Введите почту *" required>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__user-data form__user-data--gray">
@@ -124,5 +134,20 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>
       </div>
     </footer>
+
+    <section class="modal modal--success">
+      <h3 class="modal__title">Ваша заявка отправлена</h3>
+      <p class="modal__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      <div class="modal__wrap modal__wrap--bg">
+        <button class="form__send form__send--modal" type="submit">ЗАКРЫТЬ ОКНО</button>
+      </div>
+    </section>
+    <section class="modal modal--error">
+      <h3 class="modal__title">Что-то пошло не так!</h3>
+      <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <div class="modal__wrap">
+        <button class="form__send form__send--modal" type="submit">OK</button>
+      </div>
+    </section>
   </body>
 </html>

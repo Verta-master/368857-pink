@@ -8,6 +8,40 @@
 }
 
 .upload__img {
-  background-color: @bg-gray;
   padding: 20px;
+}
+
+.upload__wrap {
+  width: auto;
+  background-color: @bg-gray;
+}
+
+//-------------------TABLET------------------
+
+@media @tablet {
+  .upload__text {
+    font-size: 18px;
+  }
+
+  .upload__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+//---------------DESKTOP---------------------
+
+@media @desktop {
+  .upload {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 940px;
+    margin: auto;
+  }
+
+  .upload__wrap {
+    justify-content: space-around;
+  }
 }

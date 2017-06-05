@@ -1,6 +1,5 @@
 .modify {
   background-color: @bg-gray;
-  padding: 20px;
   padding-bottom: 40px;
 }
 
@@ -14,6 +13,7 @@
   border: none;
   outline: none;
   font-size: 0;
+  cursor: pointer;
 
   &--crop {
     background: url(../img/icon-editor-crop.svg) no-repeat center;
@@ -30,14 +30,23 @@
   }
 }
 
-.modify__slider {
-  position: relative;
+.modify__group {
+  padding: 0 40px;
+  width: auto;
   border-bottom: 1px solid #dddfe0;
   margin-bottom: 35px;
 }
 
+.modify__slider {
+  position: relative;
+
+  &:nth-child(n+2) {
+    display: none;
+  }
+}
+
 .modify__bar {
-  width: 240px;
+  width: auto;
   height: 2px;
   background-color: #000;
   margin: 33px auto;
@@ -52,4 +61,113 @@
   position: absolute;
   left: 200px;
   top: -5px;
+  cursor: pointer;
+}
+
+.modify__buttons {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+//-----------------TABLET-----------------------
+
+@media @tablet {
+  .modify {
+    margin-right: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .modify__btn {
+    transform: scale(0.5);
+  }
+
+  .modify__slider {
+
+    &:nth-child(n+2) {
+      display: block;
+    }
+
+    &:nth-child(2) .modify__pull {
+      left: 25%;
+    }
+
+    &:nth-child(3) .modify__pull {
+      left: 50%;
+    }
+
+    &::after {
+      content: "";
+      width: 280px;
+      height: 1px;
+      background-color: #dddfe0;
+      display: block;
+      position: absolute;
+      left: -60px;
+    }
+  }
+
+  .modify__pull {
+    left: 75%;
+    top: 50%;
+    transform: translateY(-5px);
+  }
+
+  .modify__wrap {
+    display: flex;
+    align-items: stretch;
+    width: 300px;
+  }
+
+  .modify__group {
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .modify__tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+//---------------------DESKTOP----------------
+
+@media @desktop {
+  .modify {
+    width: 410px;
+    margin-right: 0;
+  }
+
+  .modify__buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .modify__wrap {
+    width: 410px;
+    justify-content: space-around;
+  }
+
+  .modify__btn {
+    transform: scale(1);
+  }
+
+  .modify__group {
+    width: 285px;
+  }
+
+  .modify__slider::after {
+    width: 410px;
+    left: -120px;
+  }
 }

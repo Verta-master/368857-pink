@@ -1,20 +1,33 @@
 .photo {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .photo__comment {
   background-color: @bg-gray;
   padding: 23px 15px;
   margin: 0 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .photo__item {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .photo__img {
   margin: 0 20px;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
 
   &--panoramic {
     margin: 0;
@@ -56,4 +69,102 @@
   text-transform: uppercase;
   padding-left: 30px;
   background: url(../img/icon-heart.svg) no-repeat left;
+}
+
+//----------------TABLET-----------------------
+
+@media @tablet {
+  .photo {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .photo__item {
+    width: 320px;
+  }
+
+  .photo__item:first-child {
+    min-width: 660px;
+
+    .photo__comment {
+      margin-right: 20px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: stretch;
+    }
+
+    .photo__name {
+      order: 1;
+      width: 30%;
+    }
+
+    .photo__like {
+      order: 1;
+      width: 30%;
+      margin: 0;
+    }
+
+    .photo__text {
+      order: 3;
+      padding-right: 20px;
+    }
+  }
+
+  .photo__img {
+    font-size: 0;
+    margin-right: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .photo__comment {
+    min-height: 115px;
+    margin-right: 0;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .photo__like {
+    padding-left: 0;
+    background-position: right 20%;
+  }
+}
+
+//---------------------------DESKTOP-----------------
+@media @desktop {
+  .photo {
+    max-width: 960px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .photo__item {
+    width: 320px;
+  }
+
+  .photo__item:first-child {
+    width: 100%;
+
+    .photo__comment {
+      margin: 0 10px;
+    }
+
+    .photo__like {
+      width: 135px;
+      background-position: right 10%;
+    }
+  }
+
+  .photo__img {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .photo__comment {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

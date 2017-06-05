@@ -1,0 +1,73 @@
+.timer {
+  display: none;
+}
+
+//-----------------------TABLET---------------------
+
+@media @tablet {
+  .timer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .timer__title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+  }
+
+  .timer__info,
+  .timer__link {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+
+  .timer__info {
+    padding-right: 20px;
+  }
+
+  .timer__link {
+    color: @red;
+  }
+
+  .timer__text {
+    width: 300px;
+    padding: 10px;
+  }
+}
+
+//------------------DESKTOP------------------
+
+@media @desktop {
+  .timer {
+    padding: 50px 10px;
+    max-width: 940px;
+    margin: 0 auto;
+    justify-content: space-around;
+    background-color: @bg-gray;
+  }
+
+  .timer__text {
+    width: 570px;
+    padding: 0;
+  }
+
+  .timer__info {
+    padding-right: 75px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .timer__img {
+    transform: scale(1.26);
+  }
+
+  .timer__link {
+    font-size: 18px;
+  }
+}

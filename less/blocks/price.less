@@ -16,6 +16,10 @@
   border: 2px solid #e5e5e5;
   border-top: none;
   border-bottom: none;
+
+  &--first {
+    display: none;
+  }
 }
 
 .columns__title {
@@ -65,5 +69,67 @@
   &--no {
     background: url(../img/icon-no.svg) no-repeat;
     background-position: 90%;
+  }
+}
+
+//-----------------TABLET-----------------------
+
+@media @tablet {
+  .price {
+    width: 100%;
+  }
+
+  .columns {
+    max-width: 620px;
+    margin: 50px auto;
+  }
+
+  .columns__col {
+    width: 155px;
+
+    &--first {
+      display: table-cell;
+      font-size: 14px;
+      border-left: none;
+    }
+
+    &--first .columns__title,
+    &--first .columns__price {
+      background-color: @bg-gray;
+      color: @bg-gray;
+    }
+
+    &--first .columns__price {
+      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 18px;
+    }
+
+    &--first .columns__cell {
+      border-left: 2px solid #e5e5e5;
+    }
+
+    &:nth-child(n+2) .columns__cell {
+      font-size: 0;
+      background-position: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+//-----------------DESKTOP----------------------
+
+@media @desktop {
+  .columns {
+    max-width: 940px;
+    margin: 90px auto;
+  }
+
+  .columns__col {
+    width: 235px;
+
+    &--first {
+      font-size: 18px;
+    }
   }
 }

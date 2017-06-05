@@ -1,5 +1,5 @@
 .contacts {
-  background: url(../img/bg-map-mobile@1x.png) no-repeat center;
+//  background: url(../img/bg-map-mobile@1x.png) no-repeat center;
   min-height: 613px;
 
   a {
@@ -26,4 +26,69 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
+}
+
+.contacts__map {
+  width: 100%;
+}
+
+//-----------------------TABLET-------------------
+
+@media @tablet {
+  .contacts__bg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contacts__field {
+    width: 300px;
+    margin-bottom: 30px;
+  }
+
+  .contacts {
+    background-size: 100%;
+  }
+}
+
+//-------------------DESKTOP----------------------
+
+@media @desktop {
+  .contacts {
+    min-height: 635px;
+    padding-top: 50px;
+  }
+
+  .contacts__field {
+    width: 250px;
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+  }
+
+  .contacts__bg {
+    justify-content: space-between;
+    max-width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+  }
+
+  .info__question {
+    max-width: 960px;
+    margin: auto;
+
+    &--contacts {
+      max-width: 560px;
+    }
+  }
 }

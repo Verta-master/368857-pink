@@ -3,10 +3,18 @@
   font-weight: 300;
   color: @paleblue;
   text-align: center;
+  background-color: #fff;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.info {
+  background-color: @bg-gray;
 }
 
 .info-benefits {
-  background-color: @bg-gray;
   padding: 28px;
 
   img {
@@ -36,6 +44,123 @@
   text-align: center;
 }
 
-.review {
-  padding: 20px;
+.info-text__img:nth-child(2),
+.info-text__img:nth-child(3) {
+  display: none;
+}
+
+//-------------------TABLET--------------------------
+
+@media @tablet {
+  .info__question {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 0;
+
+    &:nth-child(n+2) {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    &--contacts {
+      padding-right: 100px;
+      padding-left: 100px;
+      background-color: #fff;
+    }
+  }
+
+  .info-benefits {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0;
+  }
+
+  .info-wrap {
+    width: 300px;
+    padding-right: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+
+  .info-text__title,
+  .info-text__paragraph {
+    text-align: left;
+  }
+
+  .info-text__title {
+    &--contacts {
+      text-align: center;
+    }
+  }
+
+  .info-img-wrap {
+    margin: auto;
+  }
+}
+
+//---------------------------DESKTOP----------------
+
+@media @desktop {
+  .info__question {
+    font-size: 50px;
+    margin: auto;
+
+    &:nth-child(2) {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+
+    &--contacts {
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+  }
+
+  .info-text__img:nth-child(2),
+  .info-text__img:nth-child(3) {
+    display: block;
+  }
+
+  .info-benefits {
+    flex-direction: column-reverse;
+    max-width: 940px;
+    margin: auto;
+  }
+
+  .info-img-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .info-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .info-text {
+    width: 33%;
+    padding-left: 45px;
+    padding-right: 47px;
+  }
+
+  .info-text__title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+
+    &--contacts {
+      font-size: 18px;
+    }
+  }
+
+  .info-text__paragraph {
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

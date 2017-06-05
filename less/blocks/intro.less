@@ -5,19 +5,20 @@
   color: #283645;
   font-weight: normal;
   text-align: center;
-}
+  background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
 
-.intro__bg {
   &--main {
-    min-height: 462px;
-    background-color: @paleblue;
+    min-height: 660px;
     background:
-      url(../img/iphone-hand-mobile@1x.png) no-repeat bottom,
-      url(../img/bg-back-mobile@1x.jpg) no-repeat bottom;
+      url(../img/iphone-hand-mobile@1x.png) no-repeat center 26%,
+      url(../img/bg-back-mobile@1x.jpg) no-repeat top;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
   &--internal {
-    background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat center;
+    background-position: center;
   }
 }
 
@@ -67,5 +68,101 @@
     border: 3px solid #fff;
     padding: 15px 0;
     border-radius: 50px;
+  }
+}
+
+//------------------TABLET---------------------
+
+@media @tablet {
+  .intro {
+    background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
+
+    &--main {
+      min-height: 462px;
+    //  background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    &--main::after {
+      content: "";
+      position: absolute;
+      width: 258px;
+      height: 286px;
+      background: url(../img/iphone-hand-mobile@1x.png) no-repeat;
+      transform: scale(1.5);
+      bottom: 15.5%;
+      right: 15%;
+      z-index: 0;
+      }
+  }
+
+  .intro__wrap {
+    width: 340px;
+    padding-bottom: 40px;
+    z-index: 1;
+  }
+
+  .intro__title {
+    font-size: 50px;
+    line-height: 1.2;
+
+    &--main {
+      font-size: 40px;
+      padding: 0 65px;
+    }
+  }
+
+  .intro__link {
+    background-color: transparent;
+  }
+
+  .intro__text {
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-bottom: 0;
+    font-size: 18px;
+    line-height: 30px;
+
+    &--hidden {
+      display: block;
+      padding-top: 0;
+    }
+  }
+}
+
+//-----------------DESKTOP---------------------
+
+@media @desktop {
+  .intro {
+
+    &--internal,
+    &--main {
+      max-width: 940px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: auto;
+      background: none;
+    }
+
+    &--main {
+      margin-bottom: 80px;
+    }
+  }
+
+  .intro__title {
+    &--main {
+      font-size: 50px;
+      padding: 0 20px;
+    }
+  }
+
+  .intro__link a {
+    font-size: 21px;
+  }
+
+  .intro__text {
+    max-width: 790px;
+    margin: auto;
   }
 }

@@ -1,5 +1,11 @@
 .paginator {
   text-align: center;
+  display: flex;
+  justify-content: center;
+
+  &--bg {
+    background-color: @bg-gray;
+  }
 }
 
 .paginator__page {
@@ -9,8 +15,6 @@
   background-color: #bec2c7;
   font-size: 0;
   border-radius: 50%;
-  display: inline-block;
-  vertical-align: middle;
   cursor: pointer;
   margin-bottom: 40px;
   margin-top: 40px;
@@ -22,5 +26,19 @@
 
   &--bg {
     border: 3px solid @bg-gray;
+  }
+}
+
+@media @tablet {
+  .paginator {
+    &--bg {
+      display: none;
+    }
+  }
+}
+
+@media @desktop {
+  .paginator {
+    display: none;
   }
 }

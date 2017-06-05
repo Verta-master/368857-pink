@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta  name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк - Конкурс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -10,7 +11,7 @@
     <header class="main-header">
       <nav class="main-nav">
         <div class="main-nav__top">
-          <a href="index.html" class="logo"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="23"></a>
+          <a href="index.html" class="logo">Logo</a>
           <button class="main-nav__btn-menu">Закрыть-Развернуть</button>
         </div>
         <ul class="main-nav__list">
@@ -23,13 +24,11 @@
     </header>
 
     <main>
-      <div class="intro">
-        <div class="intro__bg intro__bg--internal">
-          <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-          <p class="intro__text intro__text--wide">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-          <p class="intro__text intro__text--hidden">Пожалуйста, заполните форму ниже:</p>
-        </div>
-      </div>
+      <section class="intro intro--internal">
+        <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <p class="intro__text intro__text--wide">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+        <p class="intro__text intro__text--hidden">Пожалуйста, заполните форму ниже:</p>
+      </section>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form__user-data">
@@ -47,44 +46,55 @@
           </div>
         </fieldset>
         <fieldset class="form__user-data form__user-data--gray">
-          <h2 class="form__title">Ваши безбашенные достижения в путешествии</h2>
-          <div class="form__option">
-            <input type="checkbox" id="selfi" name="travel" checked>
-            <label for="selfi" class="form__label">Сделал селфи с акулой</label>
-          </div>
-          <div class="form__option">
-            <input type="checkbox" id="beach" name="travel" checked>
-            <label for="beach" class="form__label">Обгорел на пляже</label>
-          </div>
-          <div class="form__option">
-            <input type="checkbox" id="norris" name="travel">
-            <label for="norris" class="form__label">Видел Чака Норриса</label>
-          </div>
-          <div class="form__option">
-            <input type="checkbox" id="buy" name="travel">
-            <label for="buy" class="form__label">Накупил сувениров</label>
-          </div>
-          <div class="form__option">
-            <input type="checkbox" id="tower" name="travel" checked>
-            <label for="tower" class="form__label">Удержал башню</label>
-          </div>
-          <div class="form__option">
-            <input type="checkbox" id="hotel" name="travel">
-            <label for="hotel" class="form__label">Разгромил отель</label>
+          <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
+          <div class="form__wrap">
+            <div class="form__wrap-check">
+              <div class="form__option">
+                <input type="checkbox" id="selfi" name="travel" checked>
+                <label for="selfi" class="form__label">Сделал селфи с акулой</label>
+              </div>
+              <div class="form__option">
+                <input type="checkbox" id="beach" name="travel" checked>
+                <label for="beach" class="form__label">Обгорел на пляже</label>
+              </div>
+            </div>
+            <div class="form__wrap-check">
+              <div class="form__option">
+                <input type="checkbox" id="norris" name="travel">
+                <label for="norris" class="form__label">Видел Чака Норриса</label>
+              </div>
+              <div class="form__option">
+                <input type="checkbox" id="buy" name="travel">
+                <label for="buy" class="form__label">Накупил сувениров</label>
+              </div>
+            </div>
+            <div class="form__wrap-check">
+              <div class="form__option">
+                <input type="checkbox" id="tower" name="travel" checked>
+                <label for="tower" class="form__label">Удержал башню</label>
+              </div>
+              <div class="form__option">
+                <input type="checkbox" id="hotel" name="travel">
+                <label for="hotel" class="form__label">Разгромил отель</label>
+              </div>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__user-data">
-          <div class="form__field">
-            <label for="phone" class="form__name">Номер телефона</label>
-            <input type="tel" class="form__input" id="phone" name="phone" placeholder="Номер, пожалуйста">
-          </div>
-          <div class="form__field">
-            <label for="your-email" class="form__name">адрес почты</label>
-            <input type="email" class="form__input" id="your-email" name="your-email" placeholder="Введите почту *" required>
+          <legend class="form__title form__title--hidden">Контактная информация</legend>
+          <div class="form__wrap">
+            <div class="form__field form__field--contact">
+              <label for="phone" class="form__name">Номер телефона</label>
+              <input type="tel" class="form__input" id="phone" name="phone" placeholder="Номер, пожалуйста">
+            </div>
+            <div class="form__field form__field--contact">
+              <label for="your-email" class="form__name">адрес почты</label>
+              <input type="email" class="form__input" id="your-email" name="your-email" placeholder="Введите почту *" required>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__user-data form__user-data--gray">
-          <h2 class="form__title">С каким приложением путешествовали?</h2>
+          <legend class="form__title">С каким приложением путешествовали?</legend>
           <div class="form__radio">
             <input type="radio" id="ios" name="program" checked>
             <label for="ios" class="form__label">Pink для iOS</label>
@@ -99,11 +109,14 @@
           </div>
         </fieldset>
         <fieldset class="form__user-data">
-          <h2 class="form__title">Опишите свои эмоции</h2>
+          <legend class="form__title">Опишите свои эмоции</legend>
           <textarea name="form__emotion-descr" id="emotion-descr" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
-        <button class="form__send" type="submit">Отправить форму</button>
-        <p class="form__text"><span class="form__text--red">*</span>— обязательные поля</p>
+        <div class="form__end">
+          <button class="form__send" type="submit">Отправить форму</button>
+          <p class="form__text"><span class="form__text--red">*</span> — обязательные поля</p>
+          <p class="form__text form__text--hidden"><span class="form__text--red">*</span> — обязательные для заполнения поля</p>
+        </div>
       </form>
     </main>
 
@@ -121,5 +134,20 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>
       </div>
     </footer>
+
+    <section class="modal modal--success">
+      <h3 class="modal__title">Ваша заявка отправлена</h3>
+      <p class="modal__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      <div class="modal__wrap modal__wrap--bg">
+        <button class="form__send form__send--modal" type="submit">ЗАКРЫТЬ ОКНО</button>
+      </div>
+    </section>
+    <section class="modal modal--error">
+      <h3 class="modal__title">Что-то пошло не так!</h3>
+      <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <div class="modal__wrap">
+        <button class="form__send form__send--modal" type="submit">OK</button>
+      </div>
+    </section>
   </body>
 </html>

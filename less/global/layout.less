@@ -1,9 +1,57 @@
-body {
-  max-width: 320px;
+.main-header,
+main,
+.main-footer {
+  width: auto;
+  margin: 0 auto;
 }
 
 .main-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
   &--index {
     display: none;
+  }
+}
+
+.main-header {
+  background-color: @paleblue;
+}
+
+//---------------------TABLET-------------------------
+
+@media @tablet {
+
+  .main-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &--index {
+      display: flex;
+    }
+  }
+}
+
+//---------------------DESKTOP-------------------------
+
+@media @desktop {
+  .main-footer {
+    width: 940px;
+    padding: 0 10px;
+  }
+
+  .main-header {
+    background-color: #000;
+    opacity: 0.3;
+  }
+
+  body {
+    background: #fff url(../img/bg-back-mobile@1x.jpg) no-repeat top;
+    background-size: 100%;
+    background-position: center -90px;
   }
 }

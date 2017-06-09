@@ -1,6 +1,6 @@
 .social {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .social__btn {
@@ -11,14 +11,15 @@
   border: 3px solid #e9ebec;
   border-radius: 50%;
   font-size: 0;
-  margin-right: 10px;
 
   &--tw {
     background: url(../img/icon-twitter.svg) no-repeat center;
+    margin-right: 10px;
   }
 
   &--fb {
     background: url(../img/icon-facebook.svg) no-repeat center;
+    margin-right: 10px;
   }
 
   &--yt {
@@ -41,5 +42,14 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+//------------------DESKTOP----------------------
+
+@media @desktop {
+  .social {
+    margin: 0;
+    padding-top: 5px;
   }
 }

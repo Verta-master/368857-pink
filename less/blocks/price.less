@@ -53,6 +53,17 @@
   &--hit {
     background-image: url(../img/bg-hit.svg);
     background-repeat: no-repeat;
+    position: relative;
+  }
+
+  &--hit::after {
+    content: "ХИТ";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 14px;
+    transform: rotate(-45deg);
   }
 }
 
@@ -163,9 +174,14 @@
 //-----------------DESKTOP----------------------
 
 @media @desktop {
-  .price::before {
-    height: 90px;
-    top: -90px;
+  .price {
+    margin-top: 25px;
+    padding-bottom: 5px;
+
+    &::before {
+      height: 90px;
+      top: -90px;
+    }
   }
 
   .columns {
@@ -179,5 +195,29 @@
     &--first {
       font-size: 18px;
     }
+
+    &--first .columns__price {
+      padding-bottom: 18px;
+    }
+
+    &--first .columns__cell {
+      padding-left: 20px;
+      font-size: 18px;
+    }
+  }
+
+  .columns__cell {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .columns__title {
+    padding-top: 15px;
+    font-size: 18px;
+  }
+
+  .columns__price {
+    padding-bottom: 20px;
+    font-size: 24px;
   }
 }

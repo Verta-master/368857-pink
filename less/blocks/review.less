@@ -70,11 +70,26 @@
   .review {
     max-width: 940px;
     margin: auto;
+    padding-top: 165px;
+    padding-bottom: 35px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-40px);
+      background: url(../img/quotes.png) no-repeat;
+      width: 79px;
+      height: 63px;
+    }
   }
 
   .review-text__title {
     font-size: 24px;
     line-height: 30px;
+    margin-top: 18px;
   }
 
   .review-text__person {

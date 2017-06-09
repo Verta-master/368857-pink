@@ -115,7 +115,7 @@
     }
   }
 
-  .info-wrap {
+  .info__wrap {
     width: 300px;
     padding-right: 30px;
     padding-bottom: 10px;
@@ -133,7 +133,7 @@
     }
   }
 
-  .info-img-wrap {
+  .info__img-wrap {
     margin: auto;
   }
 }
@@ -143,63 +143,88 @@
 @media @desktop {
   .info__question {
     font-size: 50px;
-    margin: auto;
+    text-align: center;
+    min-width: 100%;
 
     &:nth-child(2) {
-      padding-left: 150px;
-      padding-right: 150px;
+      padding-bottom: 73px;
+      padding-left: 30%;
+      padding-right: 30%;
+      margin-bottom: 0;
+      box-sizing: border-box;
     }
 
     &--contacts {
-      padding-left: 200px;
-      padding-right: 200px;
+      padding-left: 30%;
+      padding-right: 30%;
+      box-sizing: border-box;
     }
+  }
+
+  .info-text__img {
+    transform: scale(1.25) translateY(30px);
   }
 
   .info-text__img:nth-child(2),
   .info-text__img:nth-child(3) {
     display: block;
+    margin-left: 170px;
   }
 
   .info-benefits {
     flex-direction: column-reverse;
-    max-width: 940px;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
     padding: 0 10px;
     margin: auto;
 
     &::before {
       width: 100%;
+      transform: rotate(0deg);
       height: 90px;
-      top: -90px;
+      top: 0;
+      z-index: 0;
     }
   }
 
-  .info-img-wrap {
+  .info__img-wrap {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 940px;
+    z-index: 2;
+    max-height: 300px;
+    overflow: hidden;
   }
 
-  .info-wrap {
+  .info__wrap {
     width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 30px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .info-text {
     width: 33%;
-    padding-left: 45px;
-    padding-right: 47px;
   }
 
   .info-text__title {
     text-align: center;
     font-size: 30px;
     line-height: 30px;
+    padding: 0 70px 0 30px;
+    margin-bottom: 23px;
 
     &--contacts {
       font-size: 18px;
+      margin-bottom: 18px;
+      padding: 0;
+      padding-right: 20px;
     }
   }
 
@@ -207,5 +232,6 @@
     text-align: center;
     font-size: 18px;
     line-height: 30px;
+    padding: 0 60px 0 20px;
   }
 }

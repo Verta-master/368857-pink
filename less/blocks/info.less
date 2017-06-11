@@ -24,7 +24,7 @@
 }
 
 .info-benefits {
-  padding: 32px;
+  padding: 32px 25px;
   position: relative;
 
   img {
@@ -47,7 +47,12 @@
 }
 
 .info-text {
-  margin-bottom: 35px;
+  margin-bottom: 33px;
+
+  &:nth-child(1) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 .info-text__title {
@@ -58,10 +63,6 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 0;
-
-  &--contacts {
-//    margin-bottom: 0;
-  }
 }
 
 .info-text__paragraph {
@@ -78,6 +79,10 @@
   display: none;
 }
 
+.info__img-wrap {
+  padding-top: 7px;
+}
+
 //-------------------TABLET--------------------------
 
 @media @tablet {
@@ -91,8 +96,9 @@
       padding-top: 0;
       padding-left: 40px;
       padding-right: 40px;
+      padding-bottom: 47px;
       margin-top: 0;
-      margin-bottom: 30px;
+//      margin-bottom: 30px;
     }
 
     &--contacts {
@@ -106,20 +112,30 @@
   .info-benefits {
     display: flex;
     flex-direction: row-reverse;
-    padding: 0;
+    justify-content: space-between;
+    padding: 0 20px;
 
     &::before {
       width: 100%;
       height: 50px;
-      top: -50px;
+      top: 0;
+      transform: translate(0);
     }
   }
 
   .info__wrap {
     width: 300px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    padding-top: 12px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 57px;
+  }
+
+  .info-text {
+    margin-bottom: 37px;
+
+    &:first-child {
+      padding: 0;
+    }
   }
 
   .info-text__title,
@@ -130,11 +146,20 @@
   .info-text__title {
     &--contacts {
       text-align: center;
+      margin-top: 15px;
     }
   }
 
   .info__img-wrap {
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 270px;
+    height: 480px;
+
+    img {
+      transform: scale(1.75) translateY(65px);
+    }
   }
 }
 
@@ -183,7 +208,7 @@
       width: 100%;
       transform: rotate(0deg);
       height: 90px;
-      top: 0;
+      top: 5px;
       z-index: 0;
     }
   }
@@ -192,10 +217,14 @@
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    max-width: 940px;
+    width: 820px;
     z-index: 2;
-    max-height: 300px;
+    height: 300px;
     overflow: hidden;
+
+    img {
+      transform: scale(1.25) translateY(30px);
+    }
   }
 
   .info__wrap {
@@ -210,7 +239,18 @@
   }
 
   .info-text {
-    width: 33%;
+    width: 33.3%;
+    box-sizing: border-box;
+
+    &:nth-child(3) .info-text__title {
+      padding-left: 35px;
+      padding-right: 50px;
+    }
+
+    &:nth-child(3) .info-text__paragraph {
+      padding-left: 30px;
+      padding-right: 40px;
+    }
   }
 
   .info-text__title {
@@ -222,7 +262,7 @@
 
     &--contacts {
       font-size: 18px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       padding: 0;
       padding-right: 20px;
     }

@@ -1,6 +1,10 @@
 .price {
   background-color: @bg-gray;
   overflow-x: auto;
+  position: relative;
+  padding-top: 66px;
+  margin-top: 50px;
+  padding-bottom: 20px;
 }
 
 .columns {
@@ -31,23 +35,33 @@
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
-  padding-top: 20px;
+  padding-top: 18px;
 
   &--hit {
     background-image: url(../img/bg-hit.svg);
     background-repeat: no-repeat;
+    position: relative;
+  }
+
+  &--hit::after {
+    content: "ХИТ";
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    color: #fff;
+    font-size: 14px;
+    transform: rotate(-45deg);
   }
 }
 
 .columns__price {
   display: block;
-  background-color: @paleblue;
   color: #fff;
   text-align: center;
   font-size: 24px;
   line-height: 30px;
   font-weight: 300;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 }
 
 .columns__cell {
@@ -56,19 +70,21 @@
   color: @paleblue;
   text-transform: uppercase;
   font-size: normal;
-  padding: 22px;
-  padding-right: 80px;
+  padding-left: 20px;
+  padding-right: 125px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   white-space: nowrap;
   border-bottom: 2px solid #e5e5e5;
 
   &--yes {
     background: url(../img/icon-yes.svg) no-repeat;
-    background-position: 90%;
+    background-position: 91%;
   }
 
   &--no {
     background: url(../img/icon-no.svg) no-repeat;
-    background-position: 90%;
+    background-position: 92%;
   }
 }
 
@@ -77,19 +93,47 @@
 @media @tablet {
   .price {
     width: 100%;
+    padding-top: 0;
+    padding-bottom: 33px;
   }
 
   .columns {
     max-width: 620px;
-    margin: 50px auto;
+    margin: 37px auto;
+  }
+
+  .columns__title {
+    font-size: 16px;
+    padding-top: 10px;
+
+    &--hit {
+      background-size: 40%;
+    }
+
+    &--hit::after {
+      top: 3px;
+      left: 5px;
+    }
+  }
+
+  .columns__price {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .columns__cell {
+    text-transform: none;
+    padding-right: 0;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 
   .columns__col {
-    width: 155px;
+    width: 25%;
 
     &--first {
       display: table-cell;
-      font-size: 14px;
       border-left: none;
     }
 
@@ -101,7 +145,7 @@
 
     &--first .columns__price {
       border-bottom: 2px solid #e5e5e5;
-      padding-bottom: 18px;
+      padding-bottom: 8px;
     }
 
     &--first .columns__cell {
@@ -120,9 +164,15 @@
 //-----------------DESKTOP----------------------
 
 @media @desktop {
+  .price {
+    margin-top: 40px;
+    padding-bottom: 5px;
+  }
+
   .columns {
     max-width: 940px;
-    margin: 90px auto;
+    margin: 72px auto;
+    margin-bottom: 90px;
   }
 
   .columns__col {
@@ -131,5 +181,38 @@
     &--first {
       font-size: 18px;
     }
+
+    &--first .columns__price {
+      padding-bottom: 18px;
+    }
+
+    &--first .columns__cell {
+      padding-left: 20px;
+      font-size: 18px;
+    }
+  }
+
+  .columns__cell {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .columns__title {
+    padding-top: 17px;
+    font-size: 18px;
+
+    &--hit {
+      background-size: 30%;
+    }
+
+    &--hit::after {
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  .columns__price {
+    padding-bottom: 20px;
+    font-size: 24px;
   }
 }

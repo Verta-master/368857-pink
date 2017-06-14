@@ -10,7 +10,7 @@ main,
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 40px 20px;
 
   &--index {
     display: none;
@@ -29,9 +29,12 @@ main,
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
 
     &--index {
       display: flex;
+      padding-top: 30px;
     }
   }
 }
@@ -41,7 +44,7 @@ main,
 @media @desktop {
   .main-footer {
     width: 940px;
-    padding: 0 10px;
+    padding: 65px 10px;
   }
 
   .main-header {
@@ -50,8 +53,7 @@ main,
   }
 
   body {
-    background: #fff url(../img/bg-back-mobile@1x.jpg) no-repeat top;
-    background-size: 100%;
-    background-position: center -90px;
+    background: #fff url(../img/back-desktop.jpg) no-repeat top;
+    background-size: contain;
   }
 }

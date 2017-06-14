@@ -1,5 +1,22 @@
 .review {
-  padding: 20px;
+  padding: 28px 20px;
+  padding-bottom: 0;
+  margin-top: -72px;
+  background-color: #fff;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -112px;
+    left: 0;
+    background: url(../img/bg-triangle-white.svg) no-repeat;
+    width: 100%;
+    height: 30px;
+    background-size: contain;
+    transform: rotate(-180deg);
+  }
 }
 
 .review-text:nth-child(n+2) {
@@ -13,12 +30,13 @@
   line-height: 24px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .review-text__paragraph {
   color: @paleblue;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 30px;
   font-weight: normal;
   text-align: center;
 }
@@ -38,6 +56,7 @@
     font-weight: normal;
     color: @paleblue;
     margin-bottom: 0;
+    margin-top: 2px;
   }
 
   .review-text__paragraph {
@@ -52,10 +71,19 @@
 
   .review-text__title {
     margin-bottom: 0;
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .review {
     padding-bottom: 0;
+    margin-top: 0;
+
+    &::after {
+      height: 50px;
+      bottom: -120px;
+    }
   }
 }
 
@@ -65,11 +93,33 @@
   .review {
     max-width: 940px;
     margin: auto;
+    padding-top: 168px;
+    padding-bottom: 35px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-40px);
+      background: url(../img/quotes.png) no-repeat;
+      width: 79px;
+      height: 63px;
+    }
+
+    &::after {
+      height: 90px;
+      width: 100%;
+      bottom: -40px;
+    }
   }
 
   .review-text__title {
     font-size: 24px;
     line-height: 30px;
+    margin-top: 16px;
+    margin-bottom: 5px;
   }
 
   .review-text__person {

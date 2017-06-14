@@ -5,6 +5,7 @@
 
   &--bg {
     background-color: @bg-gray;
+    padding-bottom: 30px;
   }
 }
 
@@ -16,8 +17,12 @@
   font-size: 0;
   border-radius: 50%;
   cursor: pointer;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  margin-bottom: 18px;
+  margin-top: 18px;
+
+  &:nth-child(n+2) {
+    margin-left: 12px;
+  }
 
   &--active {
     border: 3px solid @paleblue;
@@ -29,13 +34,22 @@
   }
 }
 
+//---------------------TABLET---------------------------
+
 @media @tablet {
   .paginator {
     &--bg {
       display: none;
     }
   }
+
+  .paginator__page {
+    margin-top: 35px;
+    margin-bottom: 23px;
+  }
 }
+
+//---------------------DESKTOP--------------------------
 
 @media @desktop {
   .paginator {

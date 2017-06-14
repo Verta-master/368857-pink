@@ -1,17 +1,24 @@
 .logo-download {
   background-color: @paleblue;
-  padding-bottom: 32px;
+  padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 10px;
+  box-sizing: border-box;
 }
 
 .logo-download__link {
+  display: inline-block;
+  vertical-align: middle;
+
+
   &--apple {
-    margin-right: 20px;
+    margin-right: 32px;
+    margin-top: -2px;
   }
 
   &--android {
-    margin-right: 20px;
+    margin-right: 32px;
   }
 }
 
@@ -20,7 +27,10 @@
   line-height: 24px;
   color: #fff;
   font-weight: 300;
+  margin: 10px 0 20px 0;
 }
+
+//-------------------------TABLET------------------
 
 @media @tablet {
   .logo-download {
@@ -30,11 +40,22 @@
 
   .logo-download__text {
     font-size: 18px;
+    margin-top: 25px;
   }
 }
 
+//-------------------------DESKTOP------------------
+
 @media @desktop {
+  .logo-download {
+    padding: 0;
+  }
+
   .logo-download__link {
     font-size: 18px;
+  }
+
+  .logo-download__text {
+    margin-top: 45px;
   }
 }

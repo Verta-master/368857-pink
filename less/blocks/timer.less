@@ -8,8 +8,8 @@
   .timer {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 52px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -18,6 +18,9 @@
     font-size: 30px;
     line-height: 36px;
     font-weight: bold;
+    margin-top: 27px;
+    padding-right: 130px;
+    margin-bottom: 0;
   }
 
   .timer__info,
@@ -25,6 +28,8 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: normal;
+    margin-top: 8px;
+    margin-bottom: 12px;
   }
 
   .timer__info {
@@ -46,25 +51,35 @@
 @media @desktop {
   .timer {
     padding: 50px 10px;
-    max-width: 940px;
-    margin: 0 auto;
-    justify-content: space-around;
+    padding-bottom: 95px;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
     background-color: @bg-gray;
   }
 
   .timer__text {
     width: 570px;
     padding: 0;
+    padding-left: 10px;
+    padding-top: 25px;
+    margin-left: 90px;
+  }
+
+  .timer__title {
+    margin-bottom: 20px;
   }
 
   .timer__info {
     padding-right: 75px;
     font-size: 18px;
     line-height: 30px;
+    padding-bottom: 25px;
+    margin-bottom: 8px;
   }
 
   .timer__img {
-    transform: scale(1.26);
+    transform: scale(1.25) translateY(-5px);
   }
 
   .timer__link {

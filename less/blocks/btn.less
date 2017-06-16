@@ -8,6 +8,7 @@
   padding: 15px;
   display: block;
   cursor: pointer;
+  background-color: transparent;
 
   &--post {
     border: 3px solid @red;
@@ -15,12 +16,32 @@
     margin-bottom: 15px;
   }
 
+  &--post:hover {
+    color: #fff;
+    background-color: @red;
+    }
+
+  &--post:active {
+    color: rgba(255,255,255,0.3);
+  }
+
   &--cancel {
     border: 3px solid @paleblue;
     color: @paleblue;
+    opacity: 0.1;
   }
 
-  &--disabled {
+  &--cancel:hover {
+    opacity: 0.3;
+  }
+
+  &--cancel:active {
+    opacity: 0.3;
+    background-color: @paleblue;
+    color: rgba(255,255,255,0.3);
+  }
+
+  &:disabled {
     opacity: .1;
     cursor: default;
   }

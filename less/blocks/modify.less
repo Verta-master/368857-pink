@@ -9,25 +9,37 @@
 }
 
 .modify__btn {
-  width: 50px;
-  height: 50px;
   border: none;
   outline: none;
   font-size: 0;
   cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @bg-gray;
 
   &--crop {
-    background: url(../img/icon-editor-crop.svg) no-repeat center;
     margin-right: 25px;
+  }
+
+  &--crop .modify__color {
+    fill: @red;
   }
 
   &--fill {
-    background: url(../img/icon-editor-fill.svg) no-repeat center;
     margin-right: 25px;
   }
 
-  &--contrast {
-    background: url(../img/icon-editor-contrast.svg) no-repeat center;
+  &--fill .modify__color,
+  &--contrast .modify__color {
+    fill: @paleblue;
+    opacity: 0.3;
+  }
+
+  &:hover .modify__color {
+    fill: @paleblue;
+    opacity: 0.5;
   }
 }
 
@@ -63,6 +75,10 @@
   left: 190px;
   top: -5px;
   cursor: pointer;
+
+  &:active {
+    background-color: @red;
+  }
 }
 
 .modify__buttons {
@@ -85,6 +101,11 @@
   .modify__btn {
     transform: scale(0.5);
     margin-right: 0;
+  }
+
+  .modify__btn .modify__color {
+    fill: @red;
+    opacity: 1;
   }
 
   .modify__slider {

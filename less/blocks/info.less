@@ -25,25 +25,10 @@
 
 .info-benefits {
   padding: 32px 25px;
-  position: relative;
-
-  img {
-    display: block;
-    margin: auto;
-  }
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -35px;
-    left: 0;
-    background: url(../img/bg-triangle-white.svg) no-repeat;
-    width: 100%;
-    height: 35px;
-    background-size: contain;
-    transform: rotate(180deg);
-  }
+  background-image: url(../img/bg-triangle-white.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .info-text {
@@ -81,6 +66,15 @@
 
 .info__img-wrap {
   padding-top: 7px;
+
+  picture:first-child img {
+    display: block;
+    margin: auto;
+  }
+
+  picture:nth-child(n+2) {
+    display: none;
+  }
 }
 
 //-------------------TABLET--------------------------
@@ -114,19 +108,11 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 0 20px;
-
-    &::before {
-      width: 100%;
-      height: 50px;
-      top: 0;
-      transform: translate(0);
-    }
   }
 
   .info__wrap {
     width: 300px;
     padding-right: 10px;
-    padding-bottom: 5px;
     padding-top: 57px;
   }
 
@@ -135,6 +121,10 @@
 
     &:first-child {
       padding: 0;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 0;
     }
   }
 
@@ -153,12 +143,17 @@
   .info__img-wrap {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    width: 270px;
-    height: 480px;
+    z-index: 10;
 
-    img {
-      transform: scale(1.75) translateY(65px);
+    picture:first-child {
+      display: none;
+    }
+
+    picture:nth-child(3),
+    picture:nth-child(3) img {
+      display: block;
+      margin: 0;
+      padding: 0;
     }
   }
 }
@@ -186,16 +181,6 @@
     }
   }
 
-  .info-text__img {
-    transform: scale(1.25) translateY(30px);
-  }
-
-  .info-text__img:nth-child(2),
-  .info-text__img:nth-child(3) {
-    display: block;
-    margin-left: 170px;
-  }
-
   .info-benefits {
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -203,14 +188,6 @@
     width: 100%;
     padding: 0 10px;
     margin: auto;
-
-    &::before {
-      width: 100%;
-      transform: rotate(0deg);
-      height: 90px;
-      top: 5px;
-      z-index: 0;
-    }
   }
 
   .info__img-wrap {
@@ -222,8 +199,10 @@
     height: 300px;
     overflow: hidden;
 
-    img {
-      transform: scale(1.25) translateY(30px);
+    picture:first-child,
+    picture:nth-child(n+2),
+    picture:nth-child(2) img {
+      display: block;
     }
   }
 

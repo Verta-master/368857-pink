@@ -14,6 +14,26 @@
     padding-right: 20px;
   }
 
+  .timer__img {
+    width: 240px;
+    height: 275px;
+    position: relative;
+
+    &::after {
+      content: "24";
+      position: absolute;
+      top: 80px;
+      left: 35px;
+      padding: 55px 50px;
+      font-size: 96px;
+      line-height: 96px;
+      font-weight: bold;
+      color: @red;
+      border: 10px solid @red;
+      border-radius: 50%;
+    }
+  }
+
   .timer__title {
     font-size: 30px;
     line-height: 36px;

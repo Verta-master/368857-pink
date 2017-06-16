@@ -1,23 +1,23 @@
 .contacts {
-//  background: url(../img/bg-map-mobile@1x.png) no-repeat center;
   min-height: 613px;
   padding-top: 15px;
-  position: relative;
 
   a {
     text-decoration: none;
   }
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 407px;
-    left: 0;
-    background: url(../img/bg-triangle-white-footer.svg) no-repeat;
-    width: 100%;
-    height: 34px;
-    background-size: contain;
-  }
+.contacts__wrap {
+  position: relative;
+}
+
+.contacts__shape {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
 }
 
 .contacts__text {
@@ -30,6 +30,15 @@
     margin: 0;
     margin-bottom: 10px;
     margin-top: 5px;
+  }
+
+  &--mail:hover {
+    color: @paleblue;
+    text-decoration: underline;
+  }
+
+  &--mail:active {
+    opacity: 0.3;
   }
 }
 
@@ -47,6 +56,18 @@
 
 .contacts__map {
   width: 100%;
+
+
+/*
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35.983px" height="35.983px" viewBox="0 0 35.983 35.983" enable-background="new 0 0 35.983 35.983" xml:space="preserve"><circle fill="#FFFFFF" cx="17.991" cy="17.991" r="17.991"/><circle fill="#D22856" cx="17.991" cy="17.991" r="7.866"/></svg>');
+  }*/
 }
 
 //-----------------------TABLET-------------------
@@ -77,11 +98,6 @@
   .contacts {
     background-size: 100%;
     padding-top: 48px;
-
-    &::after {
-      height: 68px;
-      top: 400px;
-    }
   }
 
   .contacts__text--red {
@@ -99,11 +115,6 @@
   .contacts {
     min-height: 635px;
     padding-top: 65px;
-
-    &::after {
-      height: 138px;
-      top: 368px;
-    }
   }
 
   .contacts__field {

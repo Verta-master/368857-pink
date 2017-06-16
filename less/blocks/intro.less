@@ -6,12 +6,10 @@
   font-weight: normal;
   text-align: center;
   background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
+  background-size: 320px auto;
+  background-position: center top -60px;
 
   &--main {
-//    min-height: 665px;
-    background:
-      url(../img/iphone-hand-mobile@1x.png) no-repeat 0 29%,
-      url(../img/bg-back-mobile@1x.jpg) no-repeat top;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -20,10 +18,22 @@
   &--internal {
     background-position: center;
   }
+
+  picture {
+    margin-top: 100px;
+    padding: 0;
+    width: 260px;
+  }
 }
 
-.intro__wrap {
-  margin-top: 396px;
+@media
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    .intro {
+      background: @paleblue url(../img/bg-back-mobile@2x.jpg) no-repeat top;
+      background-size: 640px auto;
+      background-position: center top -60px;
+    }
 }
 
 .intro__title {
@@ -81,31 +91,49 @@
     padding: 15px 0 15px 0;
     border-radius: 50px;
   }
+
+  a:hover {
+    color: @red;
+    background-color: #fff;
+  }
+
+  a:active {
+    color: rgba(210,40,86,0.3);
+  }
+
+  .intro__wrap-text {
+    width: 100%;
+    background-color: #fff;
+  }
 }
 
 //------------------TABLET---------------------
 
 @media @tablet {
   .intro {
-    background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
+    background: @paleblue url(../img/bg-back-tablet@1x.jpg) no-repeat top;
+    background-size: 660px auto;
+    background-position: center top -110px;
 
     &--main {
-//      min-height: 462px;
-    //  background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
       position: relative;
       margin-bottom: 50px;
     }
 
-    &--main::after {
-      content: "";
+    picture {
+      width: 100%;
       position: absolute;
-      width: 258px;
-      height: 286px;
-      background: url(../img/iphone-hand-mobile@1x.png) no-repeat;
-      transform: scale(1.75);
-      top: 29%;
-      right: 17.7%;
-      z-index: 0;
+      bottom: 0;
+    }
+  }
+
+  @media
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      .intro {
+        background: @paleblue url(../img/bg-back-tablet@2x.jpg) no-repeat top;
+        background-size: 1320px auto;
+        background-position: center top -110px;
       }
   }
 
@@ -165,8 +193,7 @@
 
 @media @desktop {
   .intro {
-    background-image: none;
-    background-color: transparent;
+    background: none;
 
     &--main {
       max-width: 940px;
@@ -174,26 +201,26 @@
       padding-right: 10px;
       margin: auto;
       background: none;
-    }
-
-    &--main {
       margin-bottom: 80px;
-    }
-
-    &--main::after {
-      transform: scale(2);
-      top: 33%;
-      right: 19%;
     }
 
     &--internal {
       width: 100%;
-      }
+    }
+
+    picture {
+      right: -50px;
+    }
   }
 
   .intro__wrap {
     margin-top: 105px;
     width: 300px;
+  }
+
+  .intro__wrap-text {
+    width: 100%;
+    background-color: #fff;
   }
 
   .intro__title {

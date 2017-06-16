@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <meta  name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк - Фотографии</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__top">
           <a href="index.html" class="logo">Logo</a>
-          <button class="main-nav__btn-menu">Закрыть-Развернуть</button>
+          <button class="main-nav__btn-menu main-nav__toggle">Закрыть-Развернуть</button>
         </div>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
@@ -26,15 +25,22 @@
     <main>
       <section class="intro intro--internal">
         <h1 class="intro__title">Фотографии пользователей</h1>
-        <p class="intro__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <div class="intro__wrap-text">
+          <p class="intro__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        </div>
       </section>
+
+      <a href="#" class="photo__img photo__img--panoramic">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+          <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x" alt="Panoramic view">
+        </picture>
+      </a>
 
       <ul class="photo">
         <li class="photo__item">
-          <a href="#" class="photo__img photo__img--panoramic">
-            <img src="img/panorama-mobile@1x.jpg" alt="Panoramic view" width="320" height="137">
-          </a>
-          <div class="photo__comment">
+           <div class="photo__comment">
             <b class="photo__name">Анна <span>(5 минут назад)</span></b>
             <p class="photo__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
             <b class="photo__like">Нравится: 215</b>
@@ -42,7 +48,11 @@
         </li>
         <li class="photo__item">
           <a href="#" class="photo__img">
-            <img src="img/photo-1-mobile@1x.jpg" alt="Car" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+              <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@1x.jpg 1x, img/photo-1-mobile@2x.jpg 2x" alt="Car">
+            </picture>
           </a>
           <div class="photo__comment">
             <b class="photo__name">Левон <span>(5 часов назад)</span></b>
@@ -52,7 +62,11 @@
         </li>
         <li class="photo__item">
           <a href="#" class="photo__img">
-            <img src="img/photo-2-mobile@1x.jpg" alt="Music" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+              <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@1x.jpg 1x, img/photo-2-mobile@2x.jpg 2x" alt="Music">
+            </picture>
           </a>
           <div class="photo__comment">
             <b class="photo__name">Антон <span>(12 часов назад)</span></b>
@@ -62,7 +76,11 @@
         </li>
         <li class="photo__item">
           <a href="#" class="photo__img">
-            <img src="img/photo-3-mobile@1x.jpg" alt="Glass" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+              <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@1x.jpg 1x, img/photo-3-mobile@2x.jpg 2x" alt="Glass">
+            </picture>
           </a>
           <div class="photo__comment">
             <b class="photo__name">Борис <span>(20 часов назад)</span></b>
@@ -72,7 +90,11 @@
         </li>
         <li class="photo__item">
           <a href="#" class="photo__img">
-            <img src="img/photo-4-mobile@1x.jpg" alt="Market" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+              <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@1x.jpg 1x, img/photo-4-mobile@2x.jpg 2x" alt="Market">
+            </picture>
           </a>
           <div class="photo__comment">
             <b class="photo__name">Сергей <span>(25 часов назад)</span></b>
@@ -82,7 +104,11 @@
         </li>
         <li class="photo__item">
           <a href="#" class="photo__img">
-            <img src="img/photo-5-mobile@1x.jpg" alt="Peak" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-5-desktop@1x.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-5-tablet@1x.jpg 1x, img/photo-5-tablet@2x.jpg 2x">
+              <img src="img/photo-5-mobile@1x.jpg" srcset="img/photo-5-mobile@1x.jpg 1x, img/photo-5-mobile@2x.jpg 2x" alt="Peak">
+            </picture>
           </a>
           <div class="photo__comment">
             <b class="photo__name">Максим <span>(40 часов назад)</span></b>
@@ -92,7 +118,11 @@
         </li>
         <li class="photo__item">
           <a href="#" class="photo__img">
-            <img src="img/photo-6-mobile@1x.jpg" alt="Airplane" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-6-desktop@1x.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-6-tablet@1x.jpg 1x, img/photo-6-tablet@2x.jpg 2x">
+              <img src="img/photo-6-mobile@1x.jpg" srcset="img/photo-6-mobile@1x.jpg 1x, img/photo-6-mobile@2x.jpg 2x" alt="Airplane">
+            </picture>
           </a>
           <div class="photo__comment">
             <b class="photo__name">Надежда <span>(45 часов назад)</span></b>
@@ -105,14 +135,27 @@
         <p class="upload__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
         <div class="upload__wrap">
           <div class="upload__img">
-            <img src="img/photo-7-mobile@1x.jpg" alt="Uploaded image" width="280" height="374">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-7-desktop@1x.jpg 1x, img/photo-7-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-7-tablet@1x.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
+              <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@1x.jpg 1x, img/photo-7-mobile@2x.jpg 2x" alt="Uploaded image">
+            </picture>
           </div>
           <form class="modify" action="https://echo.htmlacademy.ru/" method="post">
             <div class="modify__wrap">
               <div class="modify__tools">
-                <button class="modify__btn modify__btn--crop">Crop</button>
-                <button class="modify__btn modify__btn--fill">Fill</button>
-                <button class="modify__btn modify__btn--contrast">Contrast</button>
+                <button class="modify__btn modify__btn--crop">
+                  <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path class="modify__color" d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/></svg>
+                  Crop
+                </button>
+                <button class="modify__btn modify__btn--fill">
+                  <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path class="modify__color modify__color--gray" d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/><rect class="modify__color" y="40" width="48" height="3"/></svg>
+                  Fill
+                </button>
+                <button class="modify__btn modify__btn--contrast">
+                  <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve"><path class="modify__color" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/><path class="modify__color" d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/></svg>
+                  Contrast
+                </button>
               </div>
               <div class="modify__group">
                 <div class="slider modify__slider">
@@ -131,7 +174,7 @@
             </div>
             <div class="modify__buttons">
               <button type="submit" class="modify__post btn btn--post">Запостить</button>
-              <button type="reset" class="modify__cancel btn btn--cancel btn--disabled">Отмена</button>
+              <button type="reset" class="modify__cancel btn btn--cancel">Отмена</button>
             </div>
           </form>
         </div>
@@ -139,8 +182,8 @@
     </main>
 
     <footer class="main-footer">
-      <div class="logo logo--pic logo--footer">
-        <a href="index.html"><img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="147" height="41"></a>
+      <div class="logo-footer">
+        <a href="index.html">Logo</a>
       </div>
       <div class="social">
         <a href="#" class="social__btn social__btn--tw">Twitter</a>
@@ -149,8 +192,12 @@
       </div>
       <div class="copyright">
         <span class="copyright__text">Разработано</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve"><path class="copyright__color" d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/></svg>
+          Продвинутый HTML и CSS
+        </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

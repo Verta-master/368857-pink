@@ -6,7 +6,7 @@
   font-weight: normal;
   text-align: center;
   background: @paleblue url(../img/bg-back-mobile@1x.jpg) no-repeat top;
-  background-size: 320px auto;
+  background-size: 350px auto;
   background-position: center top -60px;
 
   &--main {
@@ -20,7 +20,7 @@
   }
 
   picture {
-    margin-top: 100px;
+    margin-top: 110px;
     padding: 0;
     width: 260px;
   }
@@ -31,7 +31,7 @@
   (min-resolution: 1.5dppx) {
     .intro {
       background: @paleblue url(../img/bg-back-mobile@2x.jpg) no-repeat top;
-      background-size: 640px auto;
+      background-size: 700px auto;
       background-position: center top -60px;
     }
 }
@@ -121,9 +121,10 @@
     }
 
     picture {
-      width: 100%;
+      width: 470px;
       position: absolute;
       bottom: 0;
+      left: -70px;
     }
   }
 
@@ -134,6 +135,11 @@
         background: @paleblue url(../img/bg-back-tablet@2x.jpg) no-repeat top;
         background-size: 1320px auto;
         background-position: center top -110px;
+      }
+
+      .intro picture {
+        width: 940px;
+        left: -140px;
       }
   }
 
@@ -210,7 +216,18 @@
 
     picture {
       right: -50px;
+      width: 550px;
+      left: 0;
+      bottom: -10px;
     }
+  }
+
+  @media
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      .intro picture {
+        width: 1100px;
+      }
   }
 
   .intro__wrap {

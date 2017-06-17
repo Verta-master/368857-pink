@@ -1,11 +1,16 @@
 .modify {
   background-color: @bg-gray;
-  padding-bottom: 40px;
-  padding-top: 15px;
+  padding-bottom: 45px;
+  padding-top: 20px;
 }
 
 .modify__tools {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 225px;
+  max-height: 50px;
+  margin: 0 auto;
 }
 
 .modify__btn {
@@ -20,7 +25,7 @@
   background-color: @bg-gray;
 
   &--crop {
-    margin-right: 25px;
+    margin-right: 20px;
   }
 
   &--crop .modify__color {
@@ -28,7 +33,11 @@
   }
 
   &--fill {
-    margin-right: 25px;
+    margin-right: 30px;
+  }
+
+  &--contrast {
+    padding-top: 10px;
   }
 
   &--fill .modify__color,
@@ -91,7 +100,7 @@
 @media @tablet {
   .modify {
     margin-right: 20px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     padding-top: 15px;
     display: flex;
     flex-direction: column;
@@ -99,8 +108,22 @@
   }
 
   .modify__btn {
-    transform: scale(0.5);
     margin-right: 0;
+    margin-bottom: 73px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .modify__btn--contrast svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .modify__btn--fill {
+    margin-bottom: 61px;
   }
 
   .modify__btn .modify__color {
@@ -171,11 +194,12 @@
   }
 
   .modify__tools {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-top: 5px;
+    justify-content: flex-start;
+    padding-top: 17px;
     padding-bottom: 12px;
+    margin-left: 5px;
+    min-height: auto;
   }
 
   .modify__buttons {
@@ -206,7 +230,20 @@
   }
 
   .modify__btn {
-    transform: scale(1);
+    svg {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .modify__btn--contrast svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .modify__tools {
+    padding-top: 10px;
+    margin-left: -3px;
   }
 
   .modify__group {
@@ -217,6 +254,10 @@
   .modify__slider::after {
     width: 410px;
     left: -120px;
+  }
+
+  .modify__bar {
+    margin-bottom: 40px;
   }
 
   .modify__slider {

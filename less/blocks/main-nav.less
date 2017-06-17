@@ -1,46 +1,31 @@
-.main-nav {
-//  padding-top: 20px;
-}
-
 .main-nav__toggle {
   font-size: 0;
   height: 24px;
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: transparent;
+  margin-left: auto;
+  padding: 0;
 }
 
 .main-nav--opened .main-nav__toggle {
-//  background: transparent url(../img/icon-menu-cross.svg) no-repeat center;
-  background-image: url('data:image/svg+xml;utf8,<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">  <path fill="#FFFFFF" d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
   width: 24px;
+}
 
-  &:hover {
-    background-image: url('data:image/svg+xml;utf8,<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">  <path fill="#d22856" d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/></svg>');
+.main-nav__toggle {
+
+  &:hover .main-nav__hover {
+    fill: @red;
   }
 
-  &:active {
+  &:active .main-nav__hover {
     opacity: 0.3;
   }
 }
 
 .main-nav--closed .main-nav__toggle {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.945px" height="24.007px" viewBox="0 0 49.945 24.007" enable-background="new 0 0 49.945 24.007" xml:space="preserve">  <g id="miu">    <g id="editor_list_view_hambuger_menu_glyph">      <g>        <path id="path-1" fill="#FFFFFF" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>      </g>      <g>        <path id="path-1_1_" fill="#FFFFFF" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>      </g>    </g>  </g></svg>');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
   width: 50px;
-
-  &:hover {
-    background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.945px" height="24.007px" viewBox="0 0 49.945 24.007" enable-background="new 0 0 49.945 24.007" xml:space="preserve">  <g id="miu">    <g id="editor_list_view_hambuger_menu_glyph">      <g>        <path id="path-1" fill="#d22856" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>      </g>      <g>        <path id="path-1_1_" fill="#d22856" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>      </g>    </g>  </g></svg>');
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .main-nav__list {
@@ -92,21 +77,48 @@
 
 //------------------Open/Close----------------------
 
-@media (max-width: 960px) {
+@media (max-width: 959px) {
   .main-nav--closed .main-nav__item {
     display: none;
   }
 
+  .main-nav--closed .main-nav__ham {
+    display: block;
+
+    .main-nav__hover {
+      fill: #fff;
+    }
+  }
+
+  .main-nav--closed .main-nav__cross {
+    display: none;
+  }
+
   .main-nav--closed .main-nav__top {
+    display: flex;
     border: none;
     background-color: rgba(0,0,0,0.3);
     position: absolute;
     width: 100%;
+    left: 0;
+    top: 0;
     box-sizing: border-box;
   }
 
   .main-nav--opened .main-nav__item {
     display: block;
+  }
+
+  .main-nav--opened .main-nav__cross {
+    display: block;
+
+    .main-nav__hover {
+      fill: #fff;
+    }
+  }
+
+  .main-nav--opened .main-nav__ham {
+    display: none;
   }
 
   .main-nav--opened .main-nav__top {
@@ -136,8 +148,12 @@
 
 @media @tablet {
   .main-nav__top {
-    padding-top: 17px;
-    padding-bottom: 31px;
+    padding-top: 27px;
+    padding-bottom: 40px;
+  }
+
+  .main-nav__toggle {
+    margin-top: 15px;
   }
 }
 
@@ -169,7 +185,7 @@
 
   .main-nav__item {
     border: none;
-    padding-left: 85px;
+    padding-left: 80px;
     padding-right: 0;
 
     a {

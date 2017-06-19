@@ -20,12 +20,19 @@
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
+  width: 48px;
+  height: 48px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: @bg-gray;
 
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+
   &--crop {
-    margin-right: 20px;
+    margin-right: 33px;
   }
 
   &--crop .modify__color {
@@ -33,11 +40,16 @@
   }
 
   &--fill {
-    margin-right: 30px;
+    margin-right: 37px;
   }
 
   &--contrast {
     padding-top: 10px;
+  }
+
+  &--contrast svg {
+    width: 32px;
+    height: 32px;
   }
 
   &--fill .modify__color,
@@ -108,8 +120,12 @@
   }
 
   .modify__btn {
-    margin-right: 0;
-    margin-bottom: 73px;
+//    margin-right: 0;
+//    margin-bottom: 73px;
+    margin: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
 
     svg {
       width: 24px;
@@ -123,7 +139,7 @@
   }
 
   .modify__btn--fill {
-    margin-bottom: 61px;
+//    margin-bottom: 61px;
   }
 
   .modify__btn .modify__color {
@@ -195,11 +211,11 @@
 
   .modify__tools {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding-top: 17px;
     padding-bottom: 12px;
-    margin-left: 5px;
-    min-height: auto;
+    margin-left: 13px;
+    min-height: 172px;
   }
 
   .modify__buttons {
@@ -230,9 +246,12 @@
   }
 
   .modify__btn {
+    width: 48px;
+    height: 48px;
+
     svg {
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      height: 48px;
     }
   }
 
@@ -244,6 +263,7 @@
   .modify__tools {
     padding-top: 10px;
     margin-left: -3px;
+    min-height: 195px;
   }
 
   .modify__group {

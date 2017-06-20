@@ -1,5 +1,5 @@
 .social {
-  margin-bottom: 40px;
+  margin-bottom: 37px;
   margin-top: 40px;
 }
 
@@ -8,9 +8,18 @@
   vertical-align: middle;
   width: 44px;
   height: 44px;
-  border: 3px solid #e9ebec;
+  border: 3px solid rgba(40,54,69,0.1);
   border-radius: 50%;
   font-size: 0;
+
+  &:hover {
+    border-color: @paleblue;
+  }
+
+  &:active {
+    opacity: 0.3;
+    border: 3px solid rgba(40,54,69,0.1);
+  }
 
   &--tw {
     background: url(../img/icon-twitter.svg) no-repeat center;
@@ -33,7 +42,8 @@
 @media @tablet {
   .social {
     margin: 0;
-    margin-right: 25px;
+    margin-right: 20px;
+    padding-top: 10px;
   }
 
   .social__btn {

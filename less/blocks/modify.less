@@ -1,33 +1,66 @@
 .modify {
   background-color: @bg-gray;
-  padding-bottom: 40px;
-  padding-top: 15px;
+  padding-bottom: 45px;
+  padding-top: 20px;
 }
 
 .modify__tools {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 225px;
+  max-height: 50px;
+  margin: 0 auto;
 }
 
 .modify__btn {
-  width: 50px;
-  height: 50px;
   border: none;
   outline: none;
   font-size: 0;
   cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @bg-gray;
+
+  svg {
+    width: 48px;
+    height: 48px;
+  }
 
   &--crop {
-    background: url(../img/icon-editor-crop.svg) no-repeat center;
-    margin-right: 25px;
+    margin-right: 33px;
+  }
+
+  &--crop .modify__color {
+    fill: @red;
   }
 
   &--fill {
-    background: url(../img/icon-editor-fill.svg) no-repeat center;
-    margin-right: 25px;
+    margin-right: 37px;
   }
 
   &--contrast {
-    background: url(../img/icon-editor-contrast.svg) no-repeat center;
+    padding-top: 10px;
+  }
+
+  &--contrast svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--fill .modify__color,
+  &--contrast .modify__color {
+    fill: @paleblue;
+    opacity: 0.3;
+  }
+
+  &:hover .modify__color {
+    fill: @paleblue;
+    opacity: 0.5;
   }
 }
 
@@ -63,6 +96,10 @@
   left: 190px;
   top: -5px;
   cursor: pointer;
+
+  &:active {
+    background-color: @red;
+  }
 }
 
 .modify__buttons {
@@ -75,7 +112,7 @@
 @media @tablet {
   .modify {
     margin-right: 20px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     padding-top: 15px;
     display: flex;
     flex-direction: column;
@@ -83,8 +120,31 @@
   }
 
   .modify__btn {
-    transform: scale(0.5);
-    margin-right: 0;
+//    margin-right: 0;
+//    margin-bottom: 73px;
+    margin: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .modify__btn--contrast svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .modify__btn--fill {
+//    margin-bottom: 61px;
+  }
+
+  .modify__btn .modify__color {
+    fill: @red;
+    opacity: 1;
   }
 
   .modify__slider {
@@ -150,11 +210,12 @@
   }
 
   .modify__tools {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 5px;
+    padding-top: 17px;
     padding-bottom: 12px;
+    margin-left: 13px;
+    min-height: 172px;
   }
 
   .modify__buttons {
@@ -185,7 +246,24 @@
   }
 
   .modify__btn {
-    transform: scale(1);
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .modify__btn--contrast svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .modify__tools {
+    padding-top: 10px;
+    margin-left: -3px;
+    min-height: 195px;
   }
 
   .modify__group {
@@ -196,6 +274,10 @@
   .modify__slider::after {
     width: 410px;
     left: -120px;
+  }
+
+  .modify__bar {
+    margin-bottom: 40px;
   }
 
   .modify__slider {

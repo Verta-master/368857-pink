@@ -18,7 +18,7 @@ main,
 }
 
 .main-header {
-  background-color: @paleblue;
+  z-index: 5;
 }
 
 //---------------------TABLET-------------------------
@@ -29,7 +29,7 @@ main,
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 35px;
+    padding-top: 30px;
     padding-bottom: 35px;
 
     &--index {
@@ -48,12 +48,6 @@ main,
   }
 
   .main-header {
-    background-color: #000;
-    opacity: 0.3;
-  }
-
-  body {
-    background: #fff url(../img/back-desktop.jpg) no-repeat top;
-    background-size: contain;
+    background-color: rgba(0,0,0,0.3);
   }
 }

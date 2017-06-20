@@ -2,9 +2,13 @@
   background-color: @bg-gray;
   overflow-x: auto;
   position: relative;
-  padding-top: 66px;
-  margin-top: 50px;
-  padding-bottom: 20px;
+  padding-top: 91px;
+  margin-top: 25px;
+  padding-bottom: 22px;
+  background-image: url(../../img/bg-triangle-white.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
 }
 
 .columns {
@@ -46,7 +50,7 @@
   &--hit::after {
     content: "ХИТ";
     position: absolute;
-    top: 10px;
+    top: 12px;
     left: 8px;
     color: #fff;
     font-size: 14px;
@@ -79,12 +83,14 @@
 
   &--yes {
     background: url(../img/icon-yes.svg) no-repeat;
-    background-position: 91%;
+    background-position: 93%;
+    background-size: 22px 16px;
   }
 
   &--no {
     background: url(../img/icon-no.svg) no-repeat;
     background-position: 92%;
+    background-size: 27px 27px;
   }
 }
 
@@ -93,8 +99,9 @@
 @media @tablet {
   .price {
     width: 100%;
-    padding-top: 0;
     padding-bottom: 33px;
+    padding-top: 50px;
+    margin-top: 0;
   }
 
   .columns {
@@ -107,7 +114,9 @@
     padding-top: 10px;
 
     &--hit {
-      background-size: 40%;
+      background-image: url(../img/bg-hit-tablet.svg);
+      background-repeat: no-repeat;
+      position: relative;
     }
 
     &--hit::after {
@@ -127,6 +136,7 @@
     padding-left: 15px;
     padding-top: 7px;
     padding-bottom: 7px;
+    min-height: 30px;
   }
 
   .columns__col {
@@ -167,6 +177,7 @@
   .price {
     margin-top: 40px;
     padding-bottom: 5px;
+    padding-top: 75px;
   }
 
   .columns {
@@ -202,7 +213,9 @@
     font-size: 18px;
 
     &--hit {
-      background-size: 30%;
+      background-image: url(../img/bg-hit.svg);
+      background-repeat: no-repeat;
+      position: relative;
     }
 
     &--hit::after {

@@ -6,12 +6,41 @@
 
 @media @tablet {
   .timer {
+    display: block;
+  }
+
+  .timer__wrap {
     display: flex;
     justify-content: space-between;
+    max-width: 660px;
+    margin: 0 auto;
     margin-top: 60px;
-    margin-bottom: 52px;
+    margin-bottom: 45px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .timer__img svg {
+    width: 240px;
+    height: 275px;
+  }
+
+  .timer__img {
+    position: relative;
+
+    &::after {
+      content: "24";
+      position: absolute;
+      top: 55px;
+      left: 18px;
+      padding: 35px 35px 47px 32px;
+      font-size: 96px;
+      line-height: 96px;
+      font-weight: bold;
+      color: @red;
+      border: 13px solid @red;
+      border-radius: 50%;
+    }
   }
 
   .timer__title {
@@ -29,11 +58,7 @@
     line-height: 24px;
     font-weight: normal;
     margin-top: 8px;
-    margin-bottom: 12px;
-  }
-
-  .timer__info {
-    padding-right: 20px;
+    margin-bottom: 8px;
   }
 
   .timer__link {
@@ -50,20 +75,25 @@
 
 @media @desktop {
   .timer {
-    padding: 50px 10px;
-    padding-bottom: 95px;
     width: 100%;
-    margin: 0;
-    justify-content: center;
     background-color: @bg-gray;
+  }
+
+  .timer__wrap {
+    padding: 50px 10px;
+    padding-bottom: 60px;
+    padding-top: 10px;
+    max-width: 940px;
+    margin: 0 auto;
+    justify-content: center;
   }
 
   .timer__text {
     width: 570px;
     padding: 0;
     padding-left: 10px;
-    padding-top: 25px;
-    margin-left: 90px;
+    padding-top: 67px;
+    margin-left: 50px;
   }
 
   .timer__title {
@@ -78,8 +108,20 @@
     margin-bottom: 8px;
   }
 
-  .timer__img {
-    transform: scale(1.25) translateY(-5px);
+  .timer__img svg {
+    width: 300px;
+    height: 345px;
+  }
+
+  .timer__img::after {
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+    top: 70px;
+    left: 25px;
+    font-size: 120px;
+    line-height: 140px;
+    padding: 37px 35px 47px 45px;
   }
 
   .timer__link {

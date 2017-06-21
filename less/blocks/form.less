@@ -17,7 +17,7 @@
   }
 }
 
-.form__wrap-main {
+.form-wrapper {
   width: 100%;
   background-color: #fff;
 }
@@ -93,7 +93,7 @@
   line-height: 18px;
   color: @red;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: 400;
   margin: 37px auto;
   margin-bottom: 45px;
   text-align: center;
@@ -113,7 +113,7 @@
   display: block;
   font-size: 18px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   color: #fff;
   background-color: #2aab6d;
   padding: 17px 48px;
@@ -150,17 +150,18 @@
   font-size: 14px;
   line-height: 30px;
   color: #000;
-  font-weight: normal;
+  font-weight: 400;
   text-transform: uppercase;
-
-  &--red {
-    color: @red;
-  }
 
   &--hidden {
     display: none;
   }
 }
+
+.form__text .form__star {
+  color: @red;
+}
+
 
 .form__option {
   margin-bottom: 52px;

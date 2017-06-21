@@ -13,7 +13,7 @@
   width: 24px;
 }
 
-.main-nav__toggle svg {
+.main-nav__toggle {
 
   &:hover .main-nav__hover {
     fill: @red;
@@ -88,6 +88,14 @@
     .main-nav__hover {
       fill: #fff;
     }
+
+    &:hover .main-nav__hover {
+      fill: @red;
+    }
+
+    &:active .main-nav__hover {
+      opacity: 0.3;
+    }
   }
 
   .main-nav--closed .main-nav__cross {
@@ -115,6 +123,14 @@
 
     .main-nav__hover {
       fill: #fff;
+    }
+
+    &:hover .main-nav__hover {
+      fill: @red;
+    }
+
+    &:active .main-nav__hover {
+      opacity: 0.3;
     }
   }
 

@@ -1,0 +1,79 @@
+.review-text:nth-child(n+3) {
+  display: none;
+}
+
+.review-text__title {
+  display: block;
+  color: #000;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.review-text__paragraph {
+  color: @paleblue;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.review-text__person {
+  display: none;
+}
+
+//------------------TABLET----------------
+
+@media @tablet {
+  .review-text__person {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    color: @paleblue;
+    margin-bottom: 0;
+    margin-top: 2px;
+  }
+
+  .review-text__paragraph {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .review-text {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .review-text__title {
+    margin-bottom: 0;
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+//---------------------DESKTOP-------------
+
+@media @desktop {
+  .review-text__title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 16px;
+    margin-bottom: 5px;
+  }
+
+  .review-text__person {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  .review-text {
+    max-width: 700px;
+    margin: auto;
+  }
+}

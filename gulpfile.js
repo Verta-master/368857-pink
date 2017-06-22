@@ -30,6 +30,9 @@ gulp.task("style:dev", function () {
       ]})
     ]))
     .pipe(gulp.dest("css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("css"))
     .pipe(server.stream());
 });
 
@@ -75,8 +78,9 @@ gulp.task("svg", function () {
 });
 
 gulp.task("js:production", function () {
-  return gulp.src("js/*.js")
+  return gulp.src("js/script.js")
     .pipe(uglify())
+    .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
 });
 
@@ -84,7 +88,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
     "img/*.{svg,png,jpg,gif}",
-    "js/vendor/**",
+    "js/*.js",
     "*.html"
   ], {
     base: "."
